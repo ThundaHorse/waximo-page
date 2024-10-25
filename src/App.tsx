@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PageHero from './components/PageHero';
+import PageFooter from './components/PageFooter';
+import PlaceholderExample from './components/PlaceholderCard';
+import EmailSignupComponent from './components/EmailSignupComponent';
+import './index';
 
 function App() {
+  function onSubmit() {
+    console.log('fdsa');
+
+    fetch('https://api.ipdata.co')
+      .then((response) => {
+        return response.json();
+        // @ts-ignore
+      }, 'jsonp')
+      .then((res) => {
+        // @ts-ignore
+        console.log(res.ip);
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App container mx-auto flex flex-col h-screen'>
+      <div className='flex-grow mb-auto'>
+        <PageHero />
+
+        <div id='hero'>
+          <EmailSignupComponent />
+        </div>
+
+        <div id='call-to-action'>
+          <PlaceholderExample />
+          <PlaceholderExample />
+        </div>
+      </div>
+
+      <div
+        id='footer'
+        className='h-10 '>
+        <PageFooter />
+      </div>
     </div>
   );
 }
