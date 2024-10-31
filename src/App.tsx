@@ -5,7 +5,7 @@ import PlaceholderExample from './components/PlaceholderCard';
 import EmailSignupComponent from './components/EmailSignupComponent';
 import './index';
 
-function App() {
+const App = () => {
   return (
     <div className='App container mx-auto flex flex-col h-screen'>
       <div className='flex-grow mb-auto'>
@@ -28,6 +28,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
