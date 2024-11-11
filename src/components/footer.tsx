@@ -1,8 +1,6 @@
 'use client';
-import Image from 'next/image';
-import { Typography, IconButton, Button } from '@material-tailwind/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+import { Typography, IconButton } from '@material-tailwind/react';
 
 const LINKS = [
   {

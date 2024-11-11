@@ -1,10 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { Alert, Button, Typography, Input } from '@material-tailwind/react';
 import { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
 import axios from 'axios';
-import Link from 'next/link';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
