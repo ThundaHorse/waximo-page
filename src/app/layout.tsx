@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { Layout } from '@/components';
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700', '900'],
   display: 'swap',
@@ -35,11 +35,8 @@ export default function RootLayout({
           type='image/png'
         />
       </head>
-      <body className={roboto.className}>
-        <Layout>
-          {children}
-          {/* <FixedPlugin /> */}
-        </Layout>
+      <body className={montserrat.className}>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

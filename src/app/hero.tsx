@@ -57,7 +57,7 @@ const Hero = () => {
       <Alert>A simple alert for showing message.</Alert>
       <header className='grid !min-h-[49rem] bg-gray-900 px-8'>
         <div className='container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2'>
-          <div className='col-span-1'>
+          <div className='col-span-1 bg-gray-200 p-6 rounded-lg'>
             <Typography
               variant='h1'
               color='black'
@@ -76,31 +76,6 @@ const Hero = () => {
               Sign-Up Now for Exclusive Updates!
             </Typography>
             <div className='flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row'>
-              {/* <form
-                id='contact-form'
-                method='post'>
-                <Input
-                  name='Email'
-                  type='email'
-                  label='Email address'
-                  size='lg'
-                  id='email-input'
-                  placeholder='Enter email here…'
-                  className='form-control'
-                  required
-                  onChange={handleInput}
-                  crossOrigin={undefined}
-                />
-                <Button
-                  size='lg'
-                  color='white'
-                  onClick={onSubmit}
-                  disabled={isLoading}
-                  className='flex justify-center items-center gap-3'>
-                  Sign Up!
-                </Button>
-              </form>
-               */}
               <Input
                 name='Email'
                 type='email'
@@ -114,11 +89,11 @@ const Hero = () => {
               />
               <Button
                 size='sm'
-                color='white'
+                color='blue'
                 onClick={onSubmit}
                 disabled={isLoading}
                 className='flex justify-center items-center gap-3'>
-                Sign Up!
+                Submit!
               </Button>
             </div>
           </div>
