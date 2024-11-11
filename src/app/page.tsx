@@ -1,5 +1,5 @@
 // components
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer, ContactUsForm } from '@/components';
 
 // sections
 import Hero from './hero';
@@ -12,13 +12,14 @@ import Faqs from './faqs';
 export default function Campaign() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
-      <VideoIntro />
+      {/* <VideoIntro /> */}
       <Feature />
       <MobileConvenience />
       {/* <Testimonials /> */}
       {/* <Faqs /> */}
+      <ContactUsForm />
       <Footer />
     </>
   );

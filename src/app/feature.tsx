@@ -11,15 +11,16 @@ import {
 } from '@heroicons/react/24/solid';
 
 import FeatureCard from '../components/feature-card';
+import { ClockIcon, TrashIcon } from '@heroicons/react/24/outline';
 
 const FEATURES = [
   {
-    icon: CursorArrowRaysIcon,
+    icon: ClockIcon,
     title: 'Expert Instructors',
     children: 'Quick',
   },
   {
-    icon: HeartIcon,
+    icon: TrashIcon,
     title: 'Interactive Learning',
     children: 'Less Tedious, Less Strenuous',
   },
@@ -48,7 +49,7 @@ const FEATURES = [
 export function Features() {
   return (
     <section className='py-28 px-4'>
-      <div className='container mx-auto mb-20 text-center'>
+      {/* <div className='container mx-auto mb-20 text-center'>
         <Typography
           color='blue-gray'
           className='mb-2 font-bold uppercase'>
@@ -67,8 +68,8 @@ export function Features() {
           commuting, waiting for a friend, or just have a few minutes to spare,
           our app fits seamlessly into your busy life.
         </Typography>
-      </div>
-      <div className='container mx-auto grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-2'>
+      </div> */}
+      <div className='container mx-auto grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-3'>
         {FEATURES.map((props, idx) => (
           <FeatureCard
             key={idx}

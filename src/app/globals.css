@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+  height: 100vh;
+  background-image: url('../../public/image/hero.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 430px) {
+  header {
+    background-image: url('../../public/image/mobileHero.webp');
+  }
+
+  .place-items-center {
+    place-items: baseline;
+  }
+}

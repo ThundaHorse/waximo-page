@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { Button, Typography, Input } from '@material-tailwind/react';
+import { Alert, Button, Typography, Input } from '@material-tailwind/react';
 import { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
@@ -55,31 +56,33 @@ const Hero = () => {
 
   return (
     <div className='relative min-h-screen w-full'>
+      <Alert>A simple alert for showing message.</Alert>
       <header className='grid !min-h-[49rem] bg-gray-900 px-8'>
         <div className='container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2'>
+          {/* <Link href='/privacy-policy'>Privacy Policy</Link> */}
           {/* <Image
             width={470}
             height={576}
-            src='/image/iphones.png'
-            alt='team work'
+            src='/image/hero_image.webp'
+            alt='Hero Image'
             className='col-span-1 my-20 h-full max-h-[30rem] -translate-y-32 md:max-h-[36rem] lg:my-0 lg:ml-auto lg:max-h-[40rem] lg:translate-y-0'
           /> */}
 
           <div className='col-span-1'>
             <Typography
               variant='h1'
-              color='white'
+              color='black'
               className='mb-4'>
               Need a better way to wax your snow gear?
             </Typography>
             <Typography
               variant='lead'
-              className='mb-7 !text-white md:pr-16 xl:pr-28'>
+              className='mb-7 !text-black md:pr-16 xl:pr-28'>
               Coming Soon! Learn more about WAXIMO
             </Typography>
             <Typography
               className='mb-4'
-              color='white'
+              color='black'
               variant='h6'>
               Sign-Up Now for Exclusive Updates!
             </Typography>
@@ -132,23 +135,44 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      {/* <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md'>
+      <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md'>
         <div>
-          <Typography
+          {/* <Typography
             variant='h3'
             color='blue-gray'
-            className='mb-3'>
-            Learning App
-          </Typography>
-          <Typography
-            variant='paragraph'
-            className='font-normal !text-gray-500 lg:w-5/12'>
-            Download our app to dive into a vast library of courses, tutorials,
-            and study materials on a wide range of subjects - from programming
-            and language learning to personal development and beyond
-          </Typography>
+            className='mb-3 text-center'>
+            Waximo
+          </Typography> */}
+          {/* <Typography
+            variant='h6'
+            className='font-normal !text-gray-500 text-center'>
+            WAXIMO is an innovative, cost-effective, time-saving, all-in-one
+            tool that simplifies the waxing process for you to spend less time
+            maintaining your snowboard or ski equipment and more time on the
+            slopes.
+          </Typography> */}
+          <div className='container mx-auto mb-20 text-center'>
+            <Typography
+              color='blue-gray'
+              className='mb-2 font-bold uppercase'>
+              Your Learning App
+            </Typography>
+            <Typography
+              variant='h1'
+              color='blue-gray'
+              className='mb-4'>
+              Diverse Learning Resources
+            </Typography>
+            <Typography
+              variant='lead'
+              className='mx-auto w-full px-4 !text-gray-500 lg:w-11/12 lg:px-8 rounded'>
+              Access your learning materials on the go. Whether you&apos;re
+              commuting, waiting for a friend, or just have a few minutes to
+              spare, our app fits seamlessly into your busy life.
+            </Typography>
+          </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
