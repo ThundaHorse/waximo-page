@@ -1,48 +1,47 @@
 'use client';
 
 import React from 'react';
-import { Typography } from '@material-tailwind/react';
-
-import {
-  CursorArrowRaysIcon,
-  HeartIcon,
-  LightBulbIcon,
-  LockClosedIcon,
-} from '@heroicons/react/24/solid';
 
 import FeatureCard from '../components/feature-card';
-import { ClockIcon, TrashIcon } from '@heroicons/react/24/outline';
+import {
+  BriefcaseIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  ExclamationTriangleIcon,
+  GlobeAmericasIcon,
+  TrashIcon,
+} from '@heroicons/react/24/outline';
 
 const FEATURES = [
   {
     icon: ClockIcon,
-    title: 'Expert Instructors',
-    children: 'Quick',
+    title: 'Quick',
+    children: '',
   },
   {
     icon: TrashIcon,
-    title: 'Interactive Learning',
-    children: 'Less Tedious, Less Strenuous',
+    title: 'Less Tedious, Less Strenuous',
+    children: '',
   },
   {
-    icon: LockClosedIcon,
-    title: 'Achievement Unlocked',
-    children: 'Beginner Friendly',
+    icon: CheckCircleIcon,
+    title: 'Beginner Friendly',
+    children: '',
   },
   {
-    icon: LightBulbIcon,
-    title: 'Personalized Progress Tracking',
-    children: 'Travel efficient',
+    icon: BriefcaseIcon,
+    title: 'Travel efficient',
+    children: '',
   },
   {
-    icon: LockClosedIcon,
-    title: 'Achievement Unlocked',
-    children: 'Environmentally Conscious',
+    icon: GlobeAmericasIcon,
+    title: 'Environmentally Conscious',
+    children: '',
   },
   {
-    icon: LightBulbIcon,
-    title: 'Personalized Progress Tracking',
-    children: 'Safer',
+    icon: ExclamationTriangleIcon,
+    title: 'Safer',
+    children: '',
   },
 ];
 

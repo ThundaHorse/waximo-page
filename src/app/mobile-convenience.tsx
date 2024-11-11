@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import InfoCard from '@/components/info-card';
-import { Typography, Card, CardBody } from '@material-tailwind/react';
+import { Typography } from '@material-tailwind/react';
 
 const OPTIONS = [
   {
@@ -72,13 +72,13 @@ const OPTIONS4 = [
 export function MobileConvenience() {
   return (
     <section className='py-20 px-8'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6'>
         <Image
           width={256}
           height={256}
-          src='/image/iphone.png'
-          className='col-span-1 w-1/2 mx-auto lg:w-10/12'
-          alt='iphone-photo'
+          src='/image/snowboard.webp'
+          className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
+          alt='Snowboard'
         />
         <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
           <Typography
@@ -107,7 +107,7 @@ export function MobileConvenience() {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6 mt-6'>
         <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
           <Typography
             variant='h2'
@@ -137,19 +137,19 @@ export function MobileConvenience() {
         <Image
           width={256}
           height={256}
-          src='/image/iphone.png'
-          className='col-span-1 w-1/2 mx-auto lg:w-10/12'
-          alt='iphone-photo'
+          src='/image/downhill.webp'
+          className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
+          alt='Downhill'
         />
       </div>
 
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6 mt-6'>
         <Image
           width={256}
           height={256}
-          src='/image/iphone.png'
-          className='col-span-1 w-1/2 mx-auto lg:w-10/12'
-          alt='iphone-photo'
+          src='/image/family.webp'
+          className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
+          alt='Family'
         />
         <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
           <Typography
@@ -178,7 +178,7 @@ export function MobileConvenience() {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-1 gap-12 max-w-6xl mx-auto items-center mt-12'>
         <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
           <Typography
             variant='h2'
@@ -206,13 +206,6 @@ export function MobileConvenience() {
             ))}
           </div>
         </div>
-        <Image
-          width={256}
-          height={256}
-          src='/image/iphone.png'
-          className='col-span-1 w-1/2 mx-auto lg:w-10/12'
-          alt='iphone-photo'
-        />
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export function InfoCard({ title, children }: InfoCardProps) {
       shadow={false}>
       <CardBody className='grid px-0'>
         <Typography
-          variant='h2'
+          variant='h6'
           color='blue-gray'
           className='mb-2'>
           {title}

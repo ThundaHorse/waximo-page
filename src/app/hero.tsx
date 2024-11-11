@@ -135,7 +135,7 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md'>
+      <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-gray-200 p-5 md:p-14 shadow-md'>
         <div>
           {/* <Typography
             variant='h3'
