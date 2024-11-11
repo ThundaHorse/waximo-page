@@ -57,15 +57,6 @@ const Hero = () => {
       <Alert>A simple alert for showing message.</Alert>
       <header className='grid !min-h-[49rem] bg-gray-900 px-8'>
         <div className='container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2'>
-          {/* <Link href='/privacy-policy'>Privacy Policy</Link> */}
-          {/* <Image
-            width={470}
-            height={576}
-            src='/image/hero_image.webp'
-            alt='Hero Image'
-            className='col-span-1 my-20 h-full max-h-[30rem] -translate-y-32 md:max-h-[36rem] lg:my-0 lg:ml-auto lg:max-h-[40rem] lg:translate-y-0'
-          /> */}
-
           <div className='col-span-1'>
             <Typography
               variant='h1'
