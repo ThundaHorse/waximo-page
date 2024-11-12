@@ -1,72 +1,25 @@
 'use client';
 
-import {
-  Button,
-  Typography,
-  Input,
-  InputProps,
-  Alert,
-} from '@material-tailwind/react';
+import { Button, Typography, Alert } from '@material-tailwind/react';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import React, { useEffect, useState } from 'react';
-import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { m } from 'framer-motion';
 import axios from 'axios';
-
-const formSchema = z.object({
-  email: z.string().email({ message: 'Invalid email.' }),
-});
-
-type FormInputs = z.infer<typeof formSchema>;
-
-type TextFieldProps = InputProps & {
-  label: string;
-  error?: string;
-  icon: React.ElementType;
-};
-
-// @ts-ignore
-const TextField = React.forwardRef<typeof Input.Field, TextFieldProps>(
-  ({ label, error, icon: Icon, ...props }, ref) => {
-    const id = React.useId();
-
-    return (
-      <label
-        htmlFor={id}
-        color='default'
-        className='mb-6 block space-y-1.5'>
-        <span className='text-sm font-semibold'>{label}</span>
-        <Input
-          isError={Boolean(error)}
-          ref={ref}
-          {...props}
-          id={id}
-          color={error ? 'error' : 'primary'}>
-          <Input.Icon>
-            <Icon className='h-full w-full place-content-end' />
-          </Input.Icon>
-        </Input>
-        {error && (
-          <Typography
-            type='small'
-            color='error'>
-            {error}
-          </Typography>
-        )}
-      </label>
-    );
-  }
-);
+import { EmailInputField, FormInputs, formSchema } from '@/components';
+import ReferralComponent from '@/components/refer-card';
 
 const Hero = () => {
   const [ipAddress, setIpAddress] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [signUpSuccessful, setSignUpSuccessful] = useState(false);
+  const [showReferral, setShowReferral] = useState(false);
+
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm<FormInputs>({
     resolver: zodResolver(formSchema),
@@ -76,15 +29,6 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    axios
-      .get('https://api.ipify.org?format=json')
-      .then((res) => {
-        setIpAddress(res.data.ip);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-
     if (signUpSuccessful) {
       setTimeout(() => {
         setSignUpSuccessful(false);
@@ -94,8 +38,7 @@ const Hero = () => {
 
   const onSubmit = async (data: FormInputs) => {
     setIsLoading(true);
-    // setSignUpSuccessful(false);
-
+    setShowReferral(false);
     const url =
       'https://script.google.com/macros/s/AKfycbwxXrkSXI9VNv8z_oU4jQhvqroAK5xt7KSD0zT2yFsfiwm1uwlorLhxLNKDBmWg4v0D/exec';
 
@@ -107,20 +50,28 @@ const Hero = () => {
     };
 
     await axios
-      .post(url, body, {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      })
-      .then((e) => {
-        console.log(e);
-        const inputElement = document.getElementsByClassName(
-          'emailInput'
-        )[0] as HTMLInputElement;
-        inputElement.value = '';
-        setSignUpSuccessful(true);
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
+      .all([
+        axios.get('https://api.ipify.org?format=json'),
+        axios.post(url, body, {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        }),
+      ])
+      .then(
+        axios.spread((call1, call2) => {
+          setIpAddress(call1.data.ip);
+          console.log(call2);
+          const inputElement = document.getElementsByClassName(
+            'emailInput'
+          )[0] as HTMLInputElement;
+          inputElement.value = '';
+          setSignUpSuccessful(true);
+          setIsLoading(false);
+          setShowReferral(true);
+        })
+      )
+      .catch((error) => {
+        console.log(error);
+        setShowReferral(false);
       });
   };
 
@@ -156,9 +107,12 @@ const Hero = () => {
                 className='mb-8'>
                 Coming Soon! Learn more about WAXIMO
               </Typography>
+
               <div className='flex w-full max-w-sm items-center gap-2'>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <TextField
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  hidden={showReferral}>
+                  <EmailInputField
                     className='emailInput'
                     type='email'
                     label='Sign up now for Exclusive Updates!'
@@ -169,8 +123,6 @@ const Hero = () => {
                     {...register('email')}
                   />
 
-                  {emailError}
-
                   <Button
                     size='md'
                     className='xl:mt-1 lg:mt-1 md:mt-1 mt-7'
@@ -179,6 +131,12 @@ const Hero = () => {
                     Submit!
                   </Button>
                 </form>
+
+                <div hidden={!showReferral}>
+                  <div className='flex w-full max-w-sm items-center gap-2'>
+                    <ReferralComponent referrer={getValues('email')} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

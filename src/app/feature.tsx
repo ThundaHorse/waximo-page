@@ -3,48 +3,8 @@
 import React from 'react';
 
 import FeatureCard from '../components/feature-card';
-import {
-  BriefcaseIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  ExclamationTriangleIcon,
-  GlobeAmericasIcon,
-  TrashIcon,
-} from '@heroicons/react/24/outline';
 import { m } from 'framer-motion';
-
-const FEATURES = [
-  {
-    icon: ClockIcon,
-    title: 'Quick',
-    children: '',
-  },
-  {
-    icon: TrashIcon,
-    title: 'Less Tedious, Less Strenuous',
-    children: '',
-  },
-  {
-    icon: CheckCircleIcon,
-    title: 'Beginner Friendly',
-    children: '',
-  },
-  {
-    icon: BriefcaseIcon,
-    title: 'Travel efficient',
-    children: '',
-  },
-  {
-    icon: GlobeAmericasIcon,
-    title: 'Environmentally Conscious',
-    children: '',
-  },
-  {
-    icon: ExclamationTriangleIcon,
-    title: 'Safer',
-    children: '',
-  },
-];
+import { FEATURES } from '@/utils/constants';
 
 export function Features() {
   return (

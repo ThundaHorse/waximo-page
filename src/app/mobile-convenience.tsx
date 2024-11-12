@@ -6,70 +6,7 @@ import InfoCard from '@/components/info-card';
 import { Typography } from '@material-tailwind/react';
 import Section from '@/components/animated-section';
 import { m } from 'framer-motion';
-
-const OPTIONS = [
-  {
-    title: 'Innovative Technology',
-    description: '',
-  },
-  {
-    title: 'Optimized for Snowboards',
-    description: '(Ski variant coming soon!)',
-  },
-  {
-    title: 'Refillable Wax',
-    description: '',
-  },
-];
-
-const OPTIONS2 = [
-  {
-    title: 'Smooth, even distribuition',
-    description: '',
-  },
-  {
-    title: 'Sustainable wax options',
-    description: '',
-  },
-  {
-    title: 'Fast Application',
-    description: '',
-  },
-];
-
-const OPTIONS3 = [
-  {
-    title: 'Simple, single tool',
-    description: '',
-  },
-  {
-    title: 'No Scraping',
-    description: '',
-  },
-  {
-    title: 'Single-handed operation',
-    description: '',
-  },
-  {
-    title: 'One-swipe application',
-    description: '',
-  },
-];
-
-const OPTIONS4 = [
-  {
-    title: 'Modern Design',
-    description: '',
-  },
-  {
-    title: 'Highly portable profile',
-    description: '',
-  },
-  {
-    title: 'Convenient ease of use',
-    description: '',
-  },
-];
+import { OPTIONS, OPTIONS2, OPTIONS3, OPTIONS4 } from '@/utils/constants';
 
 export function MobileConvenience() {
   return (
