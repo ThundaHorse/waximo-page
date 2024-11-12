@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import { Layout } from '@/components';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        <meta charSet='UTF-8' />
         <link
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
@@ -29,15 +29,21 @@ export default function RootLayout({
           crossOrigin='anonymous'
           referrerPolicy='no-referrer'
         />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1'
+        />
         <link
           rel='shortcut icon'
-          href='/favicon.png'
-          type='image/png'
+          href='/favicon.ico'
+          type='image/ico'
+        />
+        <meta
+          name='Waximo'
+          content='Coming Soon!'
         />
       </head>
-      <body className={montserrat.className}>
-        <Layout>{children}</Layout>
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

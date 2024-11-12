@@ -5,31 +5,10 @@ import {
   IconButton,
   Button,
   Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
 } from '@material-tailwind/react';
-import { useState, PointerEvent } from 'react';
-
-const LINKS = [
-  {
-    name: 'Privacy Policy',
-  },
-  {
-    name: 'Terms & Conditions',
-  },
-];
+import Link from 'next/link';
 
 const Footer = () => {
-  const [open, setOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState('');
-
-  const handleOpen = (event: PointerEvent<HTMLElement>, val: string) => {
-    event.preventDefault();
-    setOpen(true);
-    setSelectedLink(val);
-  };
-
   const renderPrivacyPolicy = () => {
     return (
       <div>
@@ -678,115 +657,137 @@ const Footer = () => {
         <div className='flex flex-wrap justify-center gap-8 md:justify-between'>
           <div className='text-center md:text-left'>
             <Typography
-              variant='h5'
-              color='white'
-              className='mb-4'>
+              type='h5'
+              className='mb-4 text-white'>
               Waximo
             </Typography>
-            <Typography
-              color='white'
-              className='mb-12 font-normal'>
+            <Typography className='mb-12 font-normal text-white'>
               Coming Soon!
             </Typography>
             <ul className='flex flex-wrap items-center justify-center md:justify-start'>
-              {LINKS.map((link, idx) => (
-                <li key={idx}>
-                  <Typography
-                    as='button'
-                    onPointerDown={(event: PointerEvent<HTMLElement>) =>
-                      handleOpen(event, link.name)
-                    }
-                    color='white'
-                    className={`py-1 font-medium transition-colors ${
-                      idx === 0 ? 'pr-3' : 'px-3'
-                    }`}>
-                    {link.name}
-                  </Typography>
-
-                  <Dialog
-                    size='xl'
-                    open={open}
-                    handler={(event: PointerEvent<HTMLElement>) =>
-                      handleOpen(event, link.name)
-                    }>
-                    <DialogHeader>{selectedLink}</DialogHeader>
-                    <DialogBody className='h-[42rem] overflow-scroll'>
-                      <div className='container'>
-                        {selectedLink === 'Privacy Policy'
-                          ? renderPrivacyPolicy()
-                          : renderTermsAndConditions()}
+              <li>
+                <Dialog>
+                  <Dialog.Trigger
+                    as={Button}
+                    variant='ghost'
+                    className='text-white lg:pl-0 pl-4'>
+                    Privacy Policy
+                  </Dialog.Trigger>
+                  <Dialog.Overlay>
+                    <Dialog.Content>
+                      <div className='mb-4 flex items-center justify-between gap-4'>
+                        <Typography type='h6'>Privacy Policy</Typography>
+                        <Dialog.DismissTrigger
+                          as={IconButton}
+                          size='sm'
+                          variant='ghost'
+                          color='secondary'
+                          isCircular
+                          className='absolute right-2 top-2'>
+                          <i className='fa-solid fa-x h-5 w-5'></i>
+                        </Dialog.DismissTrigger>
                       </div>
-                    </DialogBody>
-                    <DialogFooter>
-                      <Button
-                        variant='gradient'
-                        color='green'
-                        onPointerDown={() => setOpen(false)}>
-                        <span>Close</span>
-                      </Button>
-                    </DialogFooter>
-                  </Dialog>
-                </li>
-              ))}
+
+                      <div className='overflow-y-auto'>
+                        {renderPrivacyPolicy()}
+                      </div>
+
+                      <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        <Dialog.DismissTrigger
+                          as={Button}
+                          color='error'>
+                          Cancel
+                        </Dialog.DismissTrigger>
+                      </div>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog>
+              </li>
+
+              <li>
+                <Dialog>
+                  <Dialog.Trigger
+                    as={Button}
+                    variant='ghost'
+                    className='text-white lg:pl-0 pl-4'>
+                    Terms & Conditions
+                  </Dialog.Trigger>
+                  <Dialog.Overlay>
+                    <Dialog.Content>
+                      <div className='mb-4 flex items-center justify-between gap-4'>
+                        <Typography type='h6'>Terms & Conditions</Typography>
+                        <Dialog.DismissTrigger
+                          as={IconButton}
+                          size='sm'
+                          variant='ghost'
+                          color='secondary'
+                          isCircular
+                          className='absolute right-2 top-2'>
+                          <i className='fa-solid fa-x h-5 w-5'></i>
+                        </Dialog.DismissTrigger>
+                      </div>
+
+                      <div className='overflow-y-auto'>
+                        {renderTermsAndConditions()}
+                      </div>
+
+                      <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        <Dialog.DismissTrigger
+                          as={Button}
+                          color='error'>
+                          Cancel
+                        </Dialog.DismissTrigger>
+                      </div>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog>
+              </li>
             </ul>
           </div>
           <div className='mt-8 w-full md:mt-0 md:w-auto'>
             <Typography
               variant='h6'
-              color='white'
-              className='mb-3 text-center'>
+              className='mb-3 text-center text-white'>
               Follow Us
             </Typography>
             <div className='flex flex-col gap-2'>
               <div className='gap-2 lg:flex lg:items-center text-center'>
-                <Typography
-                  as='a'
+                <Link
                   href=''
-                  target='_blank'
-                  color='white'>
+                  target='_blank'>
                   <IconButton
-                    variant='text'
-                    color='white'
+                    variant='ghost'
                     size='lg'>
-                    <i className='fa-brands fa-kickstarter'></i>
+                    <i className='fa-brands fa-kickstarter text-white'></i>
                   </IconButton>
-                </Typography>
-                <Typography
-                  as='a'
-                  href=''
-                  target='_blank'
-                  color='white'>
+                </Link>
+                <Link
+                  href='https://www.facebook.com/WaximoOfficial'
+                  target='_blank'>
                   <IconButton
-                    variant='text'
-                    color='white'
+                    variant='ghost'
                     size='lg'>
-                    <i className='fa-brands fa-facebook text-base' />
+                    <i className='fa-brands fa-facebook text-base text-white' />
                   </IconButton>
-                </Typography>
-                <Typography
-                  as='a'
-                  href=''
-                  target='_blank'
-                  color='white'>
+                </Link>
+                <Link
+                  href='https://www.instagram.com/waximoofficial/'
+                  target='_blank'>
                   <IconButton
-                    variant='text'
-                    color='white'
+                    variant='ghost'
                     size='lg'>
-                    <i className='fa-brands fa-instagram text-base' />
+                    <i className='fa-brands fa-instagram text-base text-white' />
                   </IconButton>
-                </Typography>
-                <Typography
-                  as='a'
-                  href=''
-                  target='_blank'
-                  color='white'>
+                </Link>
+                <Link
+                  href='https://www.linkedin.com/company/waximo/'
+                  target='_blank'>
                   <IconButton
-                    variant='text'
-                    color='white'
+                    variant='ghost'
                     size='lg'>
-                    <i className='fa-brands fa-linkedin'></i>
+                    <i className='fa-brands fa-linkedin text-white'></i>
                   </IconButton>
-                </Typography>
+                </Link>
               </div>
             </div>
           </div>

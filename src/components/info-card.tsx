@@ -9,13 +9,10 @@ interface InfoCardProps {
 
 export function InfoCard({ title, children }: InfoCardProps) {
   return (
-    <Card
-      color='transparent'
-      shadow={false}>
+    <Card className='border-none'>
       <CardBody className='grid px-0'>
         <Typography
-          variant='h6'
-          color='blue-gray'
+          type='small'
           className='mb-2'>
           {title}
         </Typography>
