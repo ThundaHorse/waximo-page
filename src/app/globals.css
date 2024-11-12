@@ -4,7 +4,7 @@
 
 .hero-section {
   height: 100vh;
-  background-image: url('../../public/image/hero.webp');
+  background-image: url('../../public/images/hero.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -13,6 +13,6 @@
 
 @media only screen and (max-width: 430px) {
   .hero-section {
-    background-image: url('../../public/image/mobileHero.webp');
+    background-image: url('../../public/images/mobileHero.webp');
   }
 }

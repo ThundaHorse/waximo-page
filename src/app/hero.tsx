@@ -8,10 +8,11 @@ import {
   Alert,
 } from '@material-tailwind/react';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import React, { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { m } from 'framer-motion';
 import axios from 'axios';
 
 const formSchema = z.object({
@@ -137,7 +138,11 @@ const Hero = () => {
           </Alert>
         </div>
 
-        <div className='container mx-auto lg:mt-0 '>
+        <m.div
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: 'easeIn' }}
+          className='container mx-auto lg:mt-0 '>
           <div className='grid grid-cols-12'>
             <div className='col-span-full rounded-xl bg-gray-300 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
               <Typography
@@ -151,7 +156,6 @@ const Hero = () => {
                 className='mb-8'>
                 Coming Soon! Learn more about WAXIMO
               </Typography>
-
               <div className='flex w-full max-w-sm items-center gap-2'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <TextField
@@ -165,6 +169,8 @@ const Hero = () => {
                     {...register('email')}
                   />
 
+                  {emailError}
+
                   <Button
                     size='md'
                     className='xl:mt-1 lg:mt-1 md:mt-1 mt-7'
@@ -176,7 +182,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </m.div>
       </div>
 
       <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md'>

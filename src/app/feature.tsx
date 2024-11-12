@@ -11,6 +11,7 @@ import {
   GlobeAmericasIcon,
   TrashIcon,
 } from '@heroicons/react/24/outline';
+import { m } from 'framer-motion';
 
 const FEATURES = [
   {
@@ -48,14 +49,22 @@ const FEATURES = [
 export function Features() {
   return (
     <section className='lg:py-20 py-2 px-4'>
-      <div className='container mx-auto hidden lg:grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-3'>
+      <m.div
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, x: 100 }}
+        transition={{
+          ease: 'linear',
+          duration: 0.5,
+          x: { duration: 1 },
+        }}
+        className='container mx-auto hidden lg:grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-3'>
         {FEATURES.map((props, idx) => (
           <FeatureCard
             key={idx}
             {...props}
           />
         ))}
-      </div>
+      </m.div>
     </section>
   );
 }
