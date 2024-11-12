@@ -33,3 +33,5 @@ pnpm-lock.yaml
 yarn.lock
 
 .next
+# Local Netlify folder
+.netlify
