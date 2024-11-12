@@ -39,7 +39,6 @@ export function Testimonials() {
           </div>
           <Typography
             variant='h2'
-            color='blue-gray'
             className='mb-2'>
             What Clients Say
           </Typography>

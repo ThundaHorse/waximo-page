@@ -26,6 +26,7 @@ type TextFieldProps = InputProps & {
   icon: React.ElementType;
 };
 
+// @ts-ignore
 const TextField = React.forwardRef<typeof Input.Field, TextFieldProps>(
   ({ label, error, icon: Icon, ...props }, ref) => {
     const id = React.useId();
