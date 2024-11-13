@@ -143,7 +143,7 @@ const Hero = () => {
         </m.div>
       </div>
 
-      <div className='mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md'>
+      <div className='mx-8 lg:mx-16 -mt-24 sm:-mt-8 rounded-xl bg-white p-5 md:p-14 shadow-md'>
         <div>
           <Typography
             variant='paragraph'
