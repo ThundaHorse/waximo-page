@@ -32,11 +32,15 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
   });
 
   const emailError = errors.email?.message;
-  const EMAIL_REGEXP =
-    /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
 
   const onSubmit = async () => {
+    setIsLoading(true);
+
     alert(`${referrer} is inviting ${referrals}`);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   };
 
   const addEmailHandler = (data: FormInputs) => {
@@ -46,6 +50,21 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
     inputElement.value = '';
 
     setReferrals((referrals) => [...referrals, data.email]);
+  };
+
+  const COLORS = [
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+  ];
+
+  const generateRandomColors = () => {
+    let bgColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+    let textColor = bgColor === 'secondary' ? 'black' : 'white';
+    return `bg-${bgColor} text-${textColor} border-none`;
   };
 
   return (
@@ -61,7 +80,8 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
           <div className='flex flex-wrap justify-center items-center gap-2 mb-8'>
             {referrals.map((val) => (
               <Chip
-                size='sm'
+                size='md'
+                className={generateRandomColors()}
                 key={val}>
                 <Chip.Label>{val}</Chip.Label>
                 <Chip.DismissTrigger
@@ -84,6 +104,7 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
               icon={EnvelopeIcon}
               placeholder='example@example.com'
               required
+              disabled={isLoading}
               {...register('email')}
             />
 
@@ -102,7 +123,8 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
                 type='button'
                 color='success'
                 className='xl:mt-1 lg:mt-1 md:mt-1 mt-7'
-                onClick={handleSubmit(onSubmit)}>
+                onClick={onSubmit}
+                disabled={isLoading}>
                 Submit Referrals
               </Button>
             </div>

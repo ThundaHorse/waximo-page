@@ -109,41 +109,44 @@ const Hero = () => {
           <div className='grid grid-cols-12'>
             <div className='col-span-full rounded-xl bg-white bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
               <Typography
-                type='h3'
-                className='mb-4'>
+                type='h4'
+                className='mb-4 text-center'>
                 Need a better way to wax your snow gear?
               </Typography>
               <Typography
-                type='h6'
-                className='mb-8'>
-                Coming Soon! Learn more about WAXIMO Show Referral:{' '}
-                {`${showReferral}`}
+                type='h5'
+                className='mb-8 text-center'>
+                Coming Soon! Learn more about WAXIMO!
               </Typography>
 
               {!showReferral ? (
-                <form
-                  className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
-                  onSubmit={handleSubmit(onSubmit)}>
-                  <EmailInputField
-                    className='emailInput bg-white'
-                    type='email'
-                    label='Sign up now for Exclusive Updates!'
-                    error={emailError}
-                    icon={EnvelopeIcon}
-                    placeholder='example@example.com'
-                    disabled={isLoading}
-                    required
-                    {...register('email')}
-                  />
+                <div className='w-full flex justify-center'>
+                  <div className='flex w-full max-w-sm items-center gap-2'>
+                    <form
+                      className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
+                      onSubmit={handleSubmit(onSubmit)}>
+                      <EmailInputField
+                        className='emailInput bg-white'
+                        type='email'
+                        label='Sign up now for Exclusive Updates!'
+                        error={emailError}
+                        icon={EnvelopeIcon}
+                        placeholder='example@example.com'
+                        disabled={isLoading}
+                        required
+                        {...register('email')}
+                      />
 
-                  <Button
-                    size='md'
-                    type='submit'
-                    color='success'
-                    disabled={isLoading}>
-                    Submit
-                  </Button>
-                </form>
+                      <Button
+                        size='md'
+                        type='submit'
+                        color='success'
+                        disabled={isLoading}>
+                        Sign Up
+                      </Button>
+                    </form>
+                  </div>
+                </div>
               ) : (
                 <div className='w-full flex justify-center'>
                   <div className='flex w-full max-w-sm items-center gap-2'>
