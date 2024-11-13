@@ -108,12 +108,12 @@ const Hero = () => {
                 Coming Soon! Learn more about WAXIMO
               </Typography>
 
-              <div className='flex w-full max-w-sm items-center gap-2'>
+              <div className='flex w-full max-w-md items-center gap-2 p-2'>
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   hidden={showReferral}>
                   <EmailInputField
-                    className='emailInput'
+                    className='emailInput bg-white'
                     type='email'
                     label='Sign up now for Exclusive Updates!'
                     error={emailError}
@@ -143,7 +143,7 @@ const Hero = () => {
         </m.div>
       </div>
 
-      <div className='mx-8 lg:mx-16 -mt-24 sm:-mt-1 rounded-xl bg-white p-5 md:p-14 shadow-md'>
+      <div className='mx-8 lg:mx-16 lg:-mt-24 -mt-1 rounded-xl bg-white p-5 md:p-14 shadow-md'>
         <div>
           <Typography
             variant='paragraph'
