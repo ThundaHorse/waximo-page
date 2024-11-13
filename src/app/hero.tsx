@@ -42,37 +42,49 @@ const Hero = () => {
     const url =
       'https://script.google.com/macros/s/AKfycbwxXrkSXI9VNv8z_oU4jQhvqroAK5xt7KSD0zT2yFsfiwm1uwlorLhxLNKDBmWg4v0D/exec';
 
-    const body = {
-      Date: new Date().toLocaleDateString(),
-      Email: data.email,
-      Name: '',
-      IPAddress: ipAddress,
+    const buildForm = async () => {
+      let ready = false;
+      await axios
+        .get('https://api.ipify.org?format=json')
+        .then((res) => {
+          setIpAddress(res.data.ip);
+          ready = true;
+        })
+        .catch((e) => {
+          console.log(e);
+          ready = false;
+        });
+
+      return ready;
     };
 
-    await axios
-      .all([
-        axios.get('https://api.ipify.org?format=json'),
-        axios.post(url, body, {
+    if (await buildForm()) {
+      const body = {
+        Date: new Date().toLocaleDateString(),
+        Email: data.email,
+        Name: '',
+        IPAddress: ipAddress,
+      };
+
+      await axios
+        .post(url, body, {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        }),
-      ])
-      .then(
-        axios.spread((call1, call2) => {
-          setIpAddress(call1.data.ip);
-          console.log(call2);
+        })
+        .then((res) => {
+          setSignUpSuccessful(true);
+          setIsLoading(false);
+          setShowReferral(true);
+
           const inputElement = document.getElementsByClassName(
             'emailInput'
           )[0] as HTMLInputElement;
           inputElement.value = '';
-          setSignUpSuccessful(true);
-          setIsLoading(false);
-          setShowReferral(true);
         })
-      )
-      .catch((error) => {
-        console.log(error);
-        setShowReferral(false);
-      });
+        .catch((e) => {
+          console.log(e);
+          setShowReferral(false);
+        });
+    }
   };
 
   const emailError = errors.email?.message;
@@ -101,43 +113,44 @@ const Hero = () => {
                 className='mb-4'>
                 Need a better way to wax your snow gear?
               </Typography>
-
               <Typography
                 type='h6'
                 className='mb-8'>
-                Coming Soon! Learn more about WAXIMO
+                Coming Soon! Learn more about WAXIMO Show Referral:{' '}
+                {`${showReferral}`}
               </Typography>
 
-              <form
-                className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
-                onSubmit={handleSubmit(onSubmit)}
-                hidden={showReferral}>
-                <EmailInputField
-                  className='emailInput bg-white'
-                  type='email'
-                  label='Sign up now for Exclusive Updates!'
-                  error={emailError}
-                  icon={EnvelopeIcon}
-                  placeholder='example@example.com'
-                  required
-                  {...register('email')}
-                />
+              {!showReferral ? (
+                <form
+                  className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
+                  onSubmit={handleSubmit(onSubmit)}>
+                  <EmailInputField
+                    className='emailInput bg-white'
+                    type='email'
+                    label='Sign up now for Exclusive Updates!'
+                    error={emailError}
+                    icon={EnvelopeIcon}
+                    placeholder='example@example.com'
+                    disabled={isLoading}
+                    required
+                    {...register('email')}
+                  />
 
-                <Button
-                  size='md'
-                  type='submit'
-                  color='success'
-                  disabled={isLoading}>
-                  Submit!
-                </Button>
-              </form>
-
-              <div hidden={!showReferral}>
-                <div className='flex w-full max-w-sm items-center gap-2'>
-                  <ReferralComponent referrer={getValues('email')} />
+                  <Button
+                    size='md'
+                    type='submit'
+                    color='success'
+                    disabled={isLoading}>
+                    Submit
+                  </Button>
+                </form>
+              ) : (
+                <div className='w-full flex justify-center'>
+                  <div className='flex w-full max-w-sm items-center gap-2'>
+                    <ReferralComponent referrer={getValues('email')} />
+                  </div>
                 </div>
-              </div>
-              {/* </div> */}
+              )}
             </div>
           </div>
         </m.div>
