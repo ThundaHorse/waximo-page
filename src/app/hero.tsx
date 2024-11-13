@@ -95,7 +95,7 @@ const Hero = () => {
           transition={{ duration: 0.5, ease: 'easeIn' }}
           className='container mx-auto lg:mt-0 '>
           <div className='grid grid-cols-12'>
-            <div className='col-span-full rounded-xl bg-gray-300 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
+            <div className='col-span-full rounded-xl bg-white bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
               <Typography
                 type='h3'
                 className='mb-4'>
@@ -108,36 +108,36 @@ const Hero = () => {
                 Coming Soon! Learn more about WAXIMO
               </Typography>
 
-              <div className='flex w-full max-w-md items-center gap-2 p-2'>
-                <form
-                  onSubmit={handleSubmit(onSubmit)}
-                  hidden={showReferral}>
-                  <EmailInputField
-                    className='emailInput bg-white'
-                    type='email'
-                    label='Sign up now for Exclusive Updates!'
-                    error={emailError}
-                    icon={EnvelopeIcon}
-                    placeholder='example@example.com'
-                    required
-                    {...register('email')}
-                  />
+              <form
+                className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
+                onSubmit={handleSubmit(onSubmit)}
+                hidden={showReferral}>
+                <EmailInputField
+                  className='emailInput bg-white'
+                  type='email'
+                  label='Sign up now for Exclusive Updates!'
+                  error={emailError}
+                  icon={EnvelopeIcon}
+                  placeholder='example@example.com'
+                  required
+                  {...register('email')}
+                />
 
-                  <Button
-                    size='md'
-                    className='xl:mt-1 lg:mt-1 md:mt-1 mt-7'
-                    type='submit'
-                    disabled={isLoading}>
-                    Submit!
-                  </Button>
-                </form>
+                <Button
+                  size='md'
+                  type='submit'
+                  color='success'
+                  disabled={isLoading}>
+                  Submit!
+                </Button>
+              </form>
 
-                <div hidden={!showReferral}>
-                  <div className='flex w-full max-w-sm items-center gap-2'>
-                    <ReferralComponent referrer={getValues('email')} />
-                  </div>
+              <div hidden={!showReferral}>
+                <div className='flex w-full max-w-sm items-center gap-2'>
+                  <ReferralComponent referrer={getValues('email')} />
                 </div>
               </div>
+              {/* </div> */}
             </div>
           </div>
         </m.div>

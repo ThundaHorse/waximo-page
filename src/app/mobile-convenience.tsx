@@ -13,7 +13,7 @@ export function MobileConvenience() {
     <section className='py-20 px-8'>
       <Section>
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -52,7 +52,7 @@ export function MobileConvenience() {
         </m.div>
 
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -92,7 +92,7 @@ export function MobileConvenience() {
         </m.div>
 
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-6'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -139,12 +139,12 @@ export function MobileConvenience() {
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
-              className='mb-4'>
+              className='mb-4 text-center'>
               Gift to a Snowboarding enthusiast!
             </Typography>
             <Typography
               type='small'
-              className='mb-5 text-left  text-lg !text-gray-500 px-0  '>
+              className='mb-12 text-center text-lg !text-gray-500 px-0'>
               Waximo makes the perfect gift. Without the need to think about the
               recipient's size, preferences, and other gifting factors. Waximo
               is a tool that can be used by snowboarders at all levels and is
@@ -152,7 +152,7 @@ export function MobileConvenience() {
               of other waxing alternatives.
             </Typography>
 
-            <div className='col-span-2 lg:grid gap-5 grid-cols-2 hidden'>
+            <div className='col-span-2 lg:grid gap-5 grid-cols-2 text-center hidden'>
               {OPTIONS4.map(({ title, description }) => (
                 <InfoCard
                   key={title}
