@@ -16,7 +16,7 @@ export function FeatureCard({ icon: Icon, title, children }: FeatureCardProps) {
       }}>
       <Card className='border-none shadow-none'>
         <CardBody className='flex place-items-center'>
-          <div className='mb-2 grid h-12 w-12 place-content-center rounded-lg p-2.5 text-left text-black'>
+          <div className='mb-2 grid h-12 w-12 place-content-center rounded-lg gap-5 p-2.5 text-left text-black'>
             <Icon className='h-6 w-6' />
           </div>
           <Typography

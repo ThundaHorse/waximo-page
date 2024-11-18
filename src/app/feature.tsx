@@ -17,7 +17,7 @@ export function Features() {
           duration: 0.5,
           x: { duration: 1 },
         }}
-        className='container mx-auto hidden lg:grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-3'>
+        className='container mx-auto hidden lg:grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3'>
         {FEATURES.map((props, idx) => (
           <FeatureCard
             key={idx}
