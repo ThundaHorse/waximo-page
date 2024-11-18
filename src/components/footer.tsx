@@ -10,8 +10,85 @@ import { m } from 'framer-motion';
 import Link from 'next/link';
 import { renderPrivacyPolicy, renderTermsAndConditions } from '@/utils/helpers';
 import { FOOTER_SOCIALS } from '@/utils/constants';
+import EmailInputField, { FormInputs, formSchema } from './email-input';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import axios from 'axios';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const Footer = () => {
+  const [ipAddress, setIpAddress] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [signUpSuccessful, setSignUpSuccessful] = useState(false);
+  const [showReferral, setShowReferral] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm<FormInputs>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: '',
+    },
+  });
+
+  const onSubmit = async (data: FormInputs) => {
+    setIsLoading(true);
+    setShowReferral(false);
+    const url =
+      'https://script.google.com/macros/s/AKfycbwxXrkSXI9VNv8z_oU4jQhvqroAK5xt7KSD0zT2yFsfiwm1uwlorLhxLNKDBmWg4v0D/exec';
+
+    const body = {
+      Date: new Date().toLocaleDateString(),
+      Email: data.email,
+      IPAddress: ipAddress,
+      Contacted: false,
+    };
+
+    const fetchIp = async () => {
+      await axios
+        .get('https://api.ipify.org?format=json')
+        .then((res) => {
+          setIpAddress(res.data.ip);
+          body.IPAddress = res.data.ip;
+        })
+        .catch((e) => {
+          console.log(e);
+          return false;
+        });
+
+      return true;
+    };
+
+    if (await fetchIp()) {
+      await axios
+        .post(url, body, {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+        .then((res) => {
+          setSignUpSuccessful(true);
+          setIsLoading(false);
+          setShowReferral(true);
+
+          console.log(res.data);
+
+          const inputElement = document.getElementsByClassName(
+            'emailInput'
+          )[0] as HTMLInputElement;
+          inputElement.value = '';
+        })
+        .catch((e) => {
+          console.log(e);
+          setShowReferral(false);
+        });
+    }
+  };
+
+  const emailError = errors.email?.message;
+
   return (
     <footer className='mt-10 bg-gray-900 px-8 pt-12'>
       <div className='container mx-auto'>
@@ -20,7 +97,7 @@ const Footer = () => {
             <Typography
               type='h5'
               className='mb-4 text-white'>
-              Waximo
+              WAXIMO
             </Typography>
             <Typography className='mb-12 font-normal text-white'>
               Coming Soon!
@@ -118,7 +195,7 @@ const Footer = () => {
               Follow Us
             </Typography>
             <div className='flex flex-col gap-2'>
-              <div className='gap-2 lg:flex lg:items-center text-center'>
+              <div className='gap-2 lg:flex lg:justify-center text-center'>
                 {FOOTER_SOCIALS.map((obj, idx) => (
                   <Link
                     key={idx}
@@ -131,6 +208,34 @@ const Footer = () => {
                     </IconButton>
                   </Link>
                 ))}
+              </div>
+            </div>
+
+            <div className='w-full flex justify-end'>
+              <div className='flex w-full max-w-sm items-end gap-2'>
+                <form
+                  className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2 text-white'
+                  onSubmit={handleSubmit(onSubmit)}>
+                  <EmailInputField
+                    className='emailInput bg-white'
+                    type='email'
+                    label='Sign up now for Exclusive Updates!'
+                    error={emailError}
+                    icon={EnvelopeIcon}
+                    placeholder='example@example.com'
+                    disabled={isLoading}
+                    required
+                    {...register('email')}
+                  />
+
+                  <Button
+                    size='md'
+                    type='submit'
+                    color='success'
+                    disabled={isLoading}>
+                    Sign Up
+                  </Button>
+                </form>
               </div>
             </div>
           </div>

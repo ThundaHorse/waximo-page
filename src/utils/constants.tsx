@@ -25,7 +25,7 @@ export const FEATURES = [
   },
   {
     icon: BriefcaseIcon,
-    title: 'Travel efficient',
+    title: 'Travel Efficient',
     children: '',
   },
   {
@@ -61,15 +61,15 @@ export const FOOTER_SOCIALS = [
 
 export const OPTIONS = [
   {
-    title: 'Innovative Technology',
+    title: 'Innovative technology',
     description: '',
   },
   {
-    title: 'Optimized for Snowboards',
+    title: 'Optimized for snowboards',
     description: '(Ski variant coming soon!)',
   },
   {
-    title: 'Refillable Wax',
+    title: 'Refillable wax',
     description: '',
   },
 ];
@@ -84,7 +84,7 @@ export const OPTIONS2 = [
     description: '',
   },
   {
-    title: 'Fast Application',
+    title: 'Fast application',
     description: '',
   },
 ];
@@ -95,7 +95,7 @@ export const OPTIONS3 = [
     description: '',
   },
   {
-    title: 'No Scraping',
+    title: 'No scraping',
     description: '',
   },
   {
@@ -110,7 +110,7 @@ export const OPTIONS3 = [
 
 export const OPTIONS4 = [
   {
-    title: 'Modern Design',
+    title: 'Modern design',
     description: '',
   },
   {

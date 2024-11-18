@@ -42,30 +42,29 @@ const Hero = () => {
     const url =
       'https://script.google.com/macros/s/AKfycbwxXrkSXI9VNv8z_oU4jQhvqroAK5xt7KSD0zT2yFsfiwm1uwlorLhxLNKDBmWg4v0D/exec';
 
-    const buildForm = async () => {
-      let ready = false;
+    const body = {
+      Date: new Date().toLocaleDateString(),
+      Email: data.email,
+      IPAddress: ipAddress,
+      Contacted: false,
+    };
+
+    const fetchIp = async () => {
       await axios
         .get('https://api.ipify.org?format=json')
         .then((res) => {
           setIpAddress(res.data.ip);
-          ready = true;
+          body.IPAddress = res.data.ip;
         })
         .catch((e) => {
           console.log(e);
-          ready = false;
+          return false;
         });
 
-      return ready;
+      return true;
     };
 
-    if (await buildForm()) {
-      const body = {
-        Date: new Date().toLocaleDateString(),
-        Email: data.email,
-        Name: '',
-        IPAddress: ipAddress,
-      };
-
+    if (await fetchIp()) {
       await axios
         .post(url, body, {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -74,6 +73,8 @@ const Hero = () => {
           setSignUpSuccessful(true);
           setIsLoading(false);
           setShowReferral(true);
+
+          console.log(res.data);
 
           const inputElement = document.getElementsByClassName(
             'emailInput'
@@ -116,7 +117,7 @@ const Hero = () => {
               <Typography
                 type='h5'
                 className='mb-8 text-center'>
-                Coming Soon! Learn more about WAXIMO!
+                Learn more about <b>WAXIMO.</b>
               </Typography>
 
               {!showReferral ? (
@@ -167,8 +168,7 @@ const Hero = () => {
             <b>WAXIMO</b> is an innovative, cost-effective, time-saving,
             all-in-one tool that simplifies the waxing process for you to spend
             less time maintaining your snowboard or ski equipment and more time
-            on the slopes.ramming and language learning to personal development
-            and beyond
+            on the slopes.
           </Typography>
         </div>
       </div>

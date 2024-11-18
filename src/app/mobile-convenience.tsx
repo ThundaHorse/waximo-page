@@ -39,7 +39,7 @@ export function MobileConvenience() {
               protect your investments.
             </Typography>
 
-            <div className='col-span-2 lg:grid gap-5 grid-cols-2 hidden'>
+            <div className='col-span-2 flex flex-col'>
               {OPTIONS.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -66,13 +66,13 @@ export function MobileConvenience() {
             <Typography
               type='small'
               className='mb-5 text-left  text-lg !text-gray-500 px-0  '>
-              Avoid catching an edge! Get a smoother glide! Gain greater control
-              of your snowboard, adapt to a variety of terrains, and have an
-              overall better time! A well waxed snowboard will boost your
-              confidence on the slopes.
+              Avoid catching an edge and get a smoother glide! Gain greater
+              control of your snowboard, adapt to a variety of terrains, and
+              have an overall better time! A well waxed snowboard will boost
+              your confidence on the slopes.
             </Typography>
 
-            <div className='col-span-2 lg:grid gap-5 grid-cols-2 hidden'>
+            <div className='col-span-2 flex flex-col'>
               {OPTIONS2.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -112,13 +112,13 @@ export function MobileConvenience() {
             </Typography>
             <Typography
               type='small'
-              className='mb-5 text-left  text-lg !text-gray-500 px-0  '>
-              Waximo makes the waxing process easy. Abandon the multi-tool,
-              overly complicated, strenuous process of manually waxing your gear
-              and let Waximo do the job from start to finish!
+              className='mb-5 text-left text-lg !text-gray-500 px-0'>
+              WAXIMO makes the waxing process easy. Abandon the multi-tool,
+              overcomplicated, strenuous process of manually waxing your gear
+              and let WAXIMO do the job from start to finish.
             </Typography>
 
-            <div className='col-span-2 lg:grid gap-5 grid-cols-2 hidden'>
+            <div className='col-span-2 flex flex-col'>
               {OPTIONS3.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -145,14 +145,14 @@ export function MobileConvenience() {
             <Typography
               type='small'
               className='mb-12 text-center text-lg !text-gray-500 px-0'>
-              Waximo makes the perfect gift. Without the need to think about the
-              recipient's size, preferences, and other gifting factors. Waximo
+              WAXIMO makes the perfect gift, without the need to think about the
+              recipient’s size, preferences, and other gifting factors. WAXIMO
               is a tool that can be used by snowboarders at all levels and is
-              easy to use! Withouth the hassle and eliminating expenses and time
-              of other waxing alternatives.
+              easy to use, without the hassle and expenses of other waxing
+              alternatives.
             </Typography>
 
-            <div className='col-span-2 lg:grid gap-5 grid-cols-2 text-center hidden'>
+            <div className='col-span-2 flex flex-col'>
               {OPTIONS4.map(({ title, description }) => (
                 <InfoCard
                   key={title}
