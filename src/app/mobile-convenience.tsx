@@ -13,7 +13,8 @@ export function MobileConvenience() {
     <section className='py-20 px-8'>
       <Section>
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-opacity-75 p-12 rounded-lg'
+          style={{ background: '#2c2c2c', color: 'white' }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -21,8 +22,8 @@ export function MobileConvenience() {
           <Image
             width={256}
             height={256}
-            src='/images/snowboard.webp'
-            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
+            src='/images/Slide1.png'
+            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
             alt='Snowboard'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -56,7 +57,15 @@ export function MobileConvenience() {
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
-          }}>
+          }}
+          style={{ background: 'black', color: 'white' }}>
+          <Image
+            width={256}
+            height={256}
+            src='/images/Slide2.png'
+            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
+            alt='Downhill'
+          />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
@@ -82,17 +91,11 @@ export function MobileConvenience() {
               ))}
             </div>
           </div>
-          <Image
-            width={256}
-            height={256}
-            src='/images/downhill.webp'
-            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
-            alt='Downhill'
-          />
         </m.div>
 
         <m.div
           className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
+          style={{ background: '#2c2c2c', color: 'white' }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -100,8 +103,8 @@ export function MobileConvenience() {
           <Image
             width={256}
             height={256}
-            src='/images/family.webp'
-            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg hidden lg:block'
+            src='/images/Slide3.png'
+            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
             alt='Family'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -131,11 +134,19 @@ export function MobileConvenience() {
         </m.div>
 
         <m.div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
           }}
-          className='grid grid-cols-1 lg:grid-cols-1 gap-12 max-w-6xl mx-auto items-center mt-12'>
+          style={{ background: 'black', color: 'white' }}>
+          <Image
+            width={256}
+            height={256}
+            src='/images/Slide4-1.png'
+            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
+            alt='Family'
+          />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'

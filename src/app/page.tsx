@@ -15,7 +15,9 @@ export default function Campaign() {
         <Hero />
         <Feature />
         <MobileConvenience />
-        <div className='mx-8 lg:mx-16 lg:mt-24 mt-12 rounded-xl p-5 md:p-14 shadow-md bg-gray-300 bg-opacity-75'>
+        <div
+          className='mx-8 lg:mx-16 lg:mt-24 mt-12 rounded-xl p-5 md:p-14 shadow-md bg-opacity-75'
+          style={{ background: '#d7ffc2' }}>
           <div>
             <Typography
               type='h4'
