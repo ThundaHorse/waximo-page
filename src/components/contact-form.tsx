@@ -1,17 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 
 export function ContactSection14() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append('firstName', firstName);
+    formData.append('lastName', lastName);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    console.log(formData.forEach((e) => console.log(e)));
+  };
+
   return (
     <section className='px-8 py-8 lg:py-16'>
       <div className='container mx-auto text-center'>
-        <Typography
-          variant='h5'
-          className='mb-4 !text-base lg:!text-2xl'>
-          Customer Care
-        </Typography>
         <Typography
           variant='h1'
           className='mb-4 !text-3xl lg:!text-5xl'>
@@ -24,7 +37,7 @@ export function ContactSection14() {
         </Typography>
         <div className='flex justify-center'>
           <form
-            action='#'
+            onSubmit={handleContactSubmit}
             className='flex flex-col gap-4 lg:max-w-sm'>
             <div className='grid grid-cols-2 gap-4'>
               <div>
@@ -36,7 +49,10 @@ export function ContactSection14() {
                 <Input
                   size='lg'
                   placeholder='First Name'
-                  name='first-name'
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  type='text'
+                  required
                   className='focus:border-t-gray-900'
                 />
               </div>
@@ -49,7 +65,10 @@ export function ContactSection14() {
                 <Input
                   size='lg'
                   placeholder='Last Name'
-                  name='last-name'
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  type='text'
+                  required
                   className='focus:border-t-gray-900'
                 />
               </div>
@@ -58,12 +77,15 @@ export function ContactSection14() {
               <Typography
                 variant='small'
                 className='mb-2 text-left font-medium !text-gray-900'>
-                Your Email
+                Email
               </Typography>
               <Input
                 size='lg'
-                placeholder='name@email.com'
-                name='email'
+                placeholder='Last Name'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type='email'
+                required
                 className='focus:border-t-gray-900'
               />
             </div>
@@ -75,6 +97,9 @@ export function ContactSection14() {
               </Typography>
               <Textarea
                 rows={6}
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder='Message'
                 name='message'
                 className='focus:border-t-gray-900'
