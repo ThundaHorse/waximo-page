@@ -22,6 +22,11 @@ const LINKS = [
     href: 'about-us-section',
     id: 'nav-about-us',
   },
+  {
+    title: 'Contact Us',
+    href: 'footer-section',
+    id: 'nav-contact-us',
+  },
 ];
 
 function NavList() {
