@@ -10,7 +10,9 @@ import { OPTIONS, OPTIONS2, OPTIONS3, OPTIONS4 } from '@/utils/constants';
 
 export function MobileConvenience() {
   return (
-    <section className='py-20 px-8'>
+    <section
+      id='feature-section'
+      className='py-20 px-8'>
       <Section>
         <m.div
           className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-opacity-75 p-12 rounded-lg'

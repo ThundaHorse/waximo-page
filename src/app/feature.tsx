@@ -2,9 +2,6 @@
 
 import React from 'react';
 
-import FeatureCard from '../components/feature-card';
-import { m } from 'framer-motion';
-import { FEATURES } from '@/utils/constants';
 import Image from 'next/image';
 
 export function Features() {
@@ -17,13 +14,6 @@ export function Features() {
         className=''
         alt='waximo'
       />
-
-      {/* {FEATURES.map((props, idx) => (
-          <FeatureCard
-            key={idx}
-            {...props}
-          />
-        ))} */}
     </section>
   );
 }

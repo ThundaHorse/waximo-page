@@ -7,6 +7,7 @@ export const FaqSection = () => {
   return (
     <>
       <section
+        id='faq-section'
         className='px-12 py-20'
         style={{ background: 'black' }}>
         <div className='container max-w-6xl mx-auto'>

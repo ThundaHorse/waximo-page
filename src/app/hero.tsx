@@ -109,7 +109,7 @@ const Hero = () => {
           transition={{ duration: 0.5, ease: 'easeIn' }}
           className='container mx-auto lg:mt-0 '>
           <div className='grid grid-cols-12'>
-            <div className='col-span-full rounded-xl bg-none bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-100  xl:col-span-7'>
+            <div className='col-span-full rounded-xl bg-slate-300 bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-100  xl:col-span-7'>
               <Typography
                 type='h5'
                 className='mb-4 text-left'

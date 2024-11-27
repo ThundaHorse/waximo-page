@@ -3,38 +3,40 @@
 import * as React from 'react';
 import { IconButton, Collapse, Navbar } from '@material-tailwind/react';
 import { Menu, Xmark } from 'iconoir-react';
+import { Link } from 'react-scroll';
 import Image from 'next/image';
 
 const LINKS = [
   {
-    title: 'Pages',
-    href: '#',
+    title: 'Features',
+    href: 'feature-section',
+    id: 'nav-features',
   },
   {
-    title: 'Account',
-    href: '#',
+    title: 'FAQ',
+    href: 'faq-section',
+    id: 'nav-faq',
   },
   {
-    title: 'Blocks',
-    href: '#',
-  },
-  {
-    title: 'Docs',
-    href: '#',
+    title: 'About Us',
+    href: 'about-us-section',
+    id: 'nav-about-us',
   },
 ];
 
 function NavList() {
   return (
     <ul className='m-2 flex flex-col gap-x-3 gap-y-1 lg:m-0 lg:flex-row lg:items-center text-white'>
-      {LINKS.map(({ title, href }) => (
+      {LINKS.map(({ title, href, id }) => (
         <li key={title}>
-          <a
-            href={href}
-            type='small'
-            className='p-1 hover:text-primary text-white'>
+          <Link
+            id={id}
+            to={href}
+            className='p-1 hover:text-primary text-white'
+            smooth={true}
+            duration={500}>
             {title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
