@@ -6,13 +6,12 @@ import Hero from './hero';
 import Feature from './feature';
 import MobileConvenience from './mobile-convenience';
 import { LazyMotion, domAnimation } from 'framer-motion';
-import { Typography } from '@material-tailwind/react';
-import { FaqSection } from './fact-section';
-import { AboutUs } from './about';
+import FaqSection from './fact-section';
+import AboutUs from './about';
 
 export default function Campaign() {
   return (
-    <>
+    <div style={{ background: '#2c2c2c' }}>
       <LazyMotion features={domAnimation}>
         <Hero />
         <Feature />
@@ -21,6 +20,6 @@ export default function Campaign() {
         <AboutUs />
         <Footer />
       </LazyMotion>
-    </>
+    </div>
   );
 }

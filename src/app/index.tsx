@@ -7,3 +7,5 @@ export * from './feature';
 export * from './faqs';
 export * from './mobile-convenience';
 export * from './testimonials';
+export * from './about';
+export * from './fact-section';

@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <>
       <div
-        className='mx-8 lg:mx-16 lg:mt-24 mt-12 rounded-xl p-5 md:p-14 shadow-md bg-opacity-75'
+        className='p-12 md:p-24 shadow-md bg-opacity-75'
         style={{ background: '#d7ffc2' }}>
         <div>
           <Typography
@@ -19,9 +19,14 @@ export const AboutUs = () => {
           <Typography
             type='lead'
             className='font-normal !text-gray-500 text-center'>
-            We are a family owned business with veteran and women founders.
+            We are a family owned business with veteran and woman founders.
             WAXIMO was birthed from our desire to improve our experience on the
-            slopes and our DIY attitude.
+            slopes and our DIY attitude. Instead of having to invest a
+            significant amount of time, effort, and tools to wax our snowboards,
+            we created WAXIMO to do the job from start to finish. We saw an
+            opportunity to benefit other snowboarders and skiers who would
+            normally manually wax their equipment, or outsource the service at a
+            ski shop.
           </Typography>
 
           <br />
@@ -31,11 +36,13 @@ export const AboutUs = () => {
             className='font-normal !text-gray-500 text-center'>
             Our mission is to enable snow sport enthusiasts to spend more time
             on the slopes and less time maintaining equipment. We aspire to
-            create a more sustainable ecosystem, and bring together the snow
-            sport community
+            create a more sustainable ecosystem and bring together the snow
+            sport community.
           </Typography>
         </div>
       </div>
     </>
   );
 };
+
+export default AboutUs;

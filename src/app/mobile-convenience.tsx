@@ -29,12 +29,13 @@ export function MobileConvenience() {
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
-              className='mb-4'>
+              className='mb-4'
+              style={{ color: '#d7ffc2' }}>
               Extend the life of your snow gear
             </Typography>
             <Typography
               type='small'
-              className='mb-5 text-left text-lg !text-gray-500 px-0  '>
+              className='mb-5 text-left text-lg  px-0  '>
               Let's face it, gear is not cheap - why not make it last longer?
               Regularly waxing and maintaining your snow equipment will help you
               protect your investments.
@@ -53,7 +54,7 @@ export function MobileConvenience() {
         </m.div>
 
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
@@ -69,12 +70,13 @@ export function MobileConvenience() {
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
-              className='mb-4'>
+              className='mb-4'
+              style={{ color: '#d7ffc2' }}>
               Elevate your riding experience
             </Typography>
             <Typography
               type='small'
-              className='mb-5 text-left  text-lg !text-gray-500 px-0  '>
+              className='mb-5 text-left  text-lg  px-0  '>
               Avoid catching an edge and get a smoother glide! Gain greater
               control of your snowboard, adapt to a variety of terrains, and
               have an overall better time! A well waxed snowboard will boost
@@ -110,12 +112,13 @@ export function MobileConvenience() {
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
-              className='mb-4'>
+              className='mb-4'
+              style={{ color: '#d7ffc2' }}>
               Enjoy the process, it's easy!
             </Typography>
             <Typography
               type='small'
-              className='mb-5 text-left text-lg !text-gray-500 px-0'>
+              className='mb-5 text-left text-lg  px-0'>
               WAXIMO makes the waxing process easy. Abandon the multi-tool,
               overcomplicated, strenuous process of manually waxing your gear
               and let WAXIMO do the job from start to finish.
@@ -150,12 +153,13 @@ export function MobileConvenience() {
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
             <Typography
               type='h5'
-              className='mb-4 text-center'>
+              style={{ color: '#d7ffc2' }}
+              className='mb-4'>
               Gift to a Snowboarding enthusiast!
             </Typography>
             <Typography
               type='small'
-              className='mb-12 text-center text-lg !text-gray-500 px-0'>
+              className='mb-12 text-center text-lg px-0'>
               WAXIMO makes the perfect gift, without the need to think about the
               recipient’s size, preferences, and other gifting factors. WAXIMO
               is a tool that can be used by snowboarders at all levels and is

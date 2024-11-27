@@ -108,16 +108,22 @@ const Hero = () => {
           transition={{ duration: 0.5, ease: 'easeIn' }}
           className='container mx-auto lg:mt-0 '>
           <div className='grid grid-cols-12'>
-            <div className='col-span-full rounded-xl bg-white bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
-              <Typography
-                type='h4'
-                className='mb-4 text-center'>
-                Need a better way to wax your snow gear?
-              </Typography>
+            <div className='col-span-full rounded-xl bg-none bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
               <Typography
                 type='h5'
-                className='mb-8 text-center'>
-                Learn more about <b>WAXIMO.</b>
+                className='mb-4 text-left'
+                style={{ color: '#d7ffc2' }}>
+                Need a better way to wax your snow gear?
+              </Typography>
+
+              <Typography
+                type='h5'
+                className='mb-4 text-left'>
+                Introducing
+              </Typography>
+
+              <Typography className='mb-4 text-left'>
+                WAXIMO, the all-in-one waxing tool for snow gear
               </Typography>
 
               {!showReferral ? (
@@ -160,11 +166,19 @@ const Hero = () => {
         </m.div>
       </div>
 
-      <div className='mx-8 lg:mx-16 lg:-mt-24 -mt-1 rounded-xl bg-white p-5 md:p-14 shadow-md'>
+      <div
+        className='mx-8 lg:mx-16 lg:-mt-24 -mt-1 rounded-xl bg-white p-5 md:p-14 shadow-md'
+        style={{ background: '#2c2c2c' }}>
         <div>
           <Typography
+            type='h5'
+            className='text-center mb-12'
+            style={{ color: '#d7ffc2' }}>
+            What is WAXIMO?
+          </Typography>
+          <Typography
             variant='paragraph'
-            className='font-normal !text-gray-500 text-center'>
+            className='font-normal text-white text-center'>
             <b>WAXIMO</b> is an innovative, cost-effective, time-saving,
             all-in-one tool that simplifies the waxing process for you to spend
             less time maintaining your snowboard or ski equipment and more time

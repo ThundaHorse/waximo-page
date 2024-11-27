@@ -16,6 +16,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const Footer = () => {
   const [ipAddress, setIpAddress] = useState('');
@@ -90,17 +91,20 @@ const Footer = () => {
   const emailError = errors.email?.message;
 
   return (
-    <footer className='mt-10 bg-gray-900 px-8 pt-12'>
+    <footer className='bg-gray-900 px-8 pt-12'>
       <div className='container mx-auto'>
         <div className='flex flex-wrap justify-center gap-8 md:justify-between'>
           <div className='text-center md:text-left'>
-            <Typography
-              type='h5'
-              className='mb-4 text-white'>
-              WAXIMO
-            </Typography>
+            <Image
+              width={300}
+              height={50}
+              src='/images/Logo1.webp'
+              className=''
+              alt='Logo'
+            />
+
             <Typography className='mb-12 font-normal text-white'>
-              Coming Soon!
+              The all-in-one waxing tool for snow gear
             </Typography>
             <ul className='flex flex-wrap items-center justify-center md:justify-start'>
               <m.li
@@ -240,7 +244,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between'></div>
+        <div className='mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between'>
+          <Typography className='text-white'>
+            Copyright © 2024 WAXIMO LLC. All rights reserved.
+          </Typography>
+        </div>
       </div>
     </footer>
   );
