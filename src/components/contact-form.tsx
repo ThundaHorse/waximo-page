@@ -13,6 +13,8 @@ export function ContactSection14() {
   const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    setIsLoading(true);
+
     const formData = new FormData();
     formData.append('firstName', firstName);
     formData.append('lastName', lastName);
@@ -50,7 +52,9 @@ export function ContactSection14() {
                   size='lg'
                   placeholder='First Name'
                   value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setFirstName(e.target.value)
+                  }
                   type='text'
                   required
                   className='focus:border-t-gray-900'
@@ -66,7 +70,9 @@ export function ContactSection14() {
                   size='lg'
                   placeholder='Last Name'
                   value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setLastName(e.target.value)
+                  }
                   type='text'
                   required
                   className='focus:border-t-gray-900'
@@ -83,7 +89,9 @@ export function ContactSection14() {
                 size='lg'
                 placeholder='Last Name'
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
                 type='email'
                 required
                 className='focus:border-t-gray-900'
@@ -99,13 +107,19 @@ export function ContactSection14() {
                 rows={6}
                 required
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                  setMessage(e.target.value)
+                }
                 placeholder='Message'
                 name='message'
                 className='focus:border-t-gray-900'
               />
             </div>
-            <Button className='w-full'>Send message</Button>
+            <Button
+              disabled={isLoading}
+              className='w-full'>
+              Send message
+            </Button>
           </form>
         </div>
       </div>
