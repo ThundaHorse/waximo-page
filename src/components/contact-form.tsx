@@ -1,129 +1,91 @@
 'use client';
 
-import * as React from 'react';
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  Input,
-  Button,
-  Checkbox,
-  Typography,
-  InputProps,
-} from '@material-tailwind/react';
-import { Lock, Mail, ProfileCircle } from 'iconoir-react';
+import React from 'react';
+import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 
-const formSchema = z.object({
-  name: z.string().min(1, { message: 'Name is required.' }),
-  email: z.string().email({ message: 'Invalid email.' }),
-  password: z
-    .string()
-    .min(6, { message: 'Password must be at least 6 characters.' }),
-});
-
-type FormInputs = z.infer<typeof formSchema>;
-
-type TextFieldProps = InputProps & {
-  label: string;
-  error?: string;
-  icon: React.ElementType;
-};
-
-const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ label, error, icon: Icon, ...props }, ref) => {
-    const id = React.useId();
-
-    return (
-      <>
-        <label htmlFor={id}>{label}</label>
-        <Input
-          ref={ref}
-          {...props}
-          id={id}
-          isError={Boolean(error)}
-          color={error ? 'error' : 'primary'}>
-          <Input.Icon>
-            <Icon className='h-full w-full' />
-          </Input.Icon>
-        </Input>
-        {error && (
-          <Typography
-            type='small'
-            color='error'>
-            {error}
-          </Typography>
-        )}
-      </>
-    );
-  }
-);
-
-export function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormInputs>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      password: '',
-    },
-  });
-
-  function onSubmit(data: FormInputs) {
-    console.log(data);
-  }
-
-  const nameError = errors.name?.message;
-  const emailError = errors.email?.message;
-  const passwordError = errors.password?.message;
-
+export function ContactSection14() {
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className='w-full max-w-md'>
-      <TextField
-        label='Name'
-        error={nameError}
-        icon={ProfileCircle}
-        placeholder='Alex Smith'
-        {...register('name')}
-      />
-      <TextField
-        type='email'
-        label='Email Address'
-        error={emailError}
-        icon={Mail}
-        placeholder='someone@example.com'
-        {...register('email')}
-      />
-      <TextField
-        type='password'
-        label='Password'
-        error={passwordError}
-        icon={Lock}
-        placeholder='******'
-        {...register('password')}
-      />
-      <div className='my-6 flex items-center gap-2'>
-        <Checkbox>
-          <Checkbox.Indicator />
-        </Checkbox>
+    <section className='px-8 py-8 lg:py-16'>
+      <div className='container mx-auto text-center'>
+        <Typography
+          variant='h5'
+          className='mb-4 !text-base lg:!text-2xl'>
+          Customer Care
+        </Typography>
+        <Typography
+          variant='h1'
+          className='mb-4 !text-3xl lg:!text-5xl'>
+          We&apos;re Here to Help
+        </Typography>
+        <Typography className='mb-10 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-gray-500'>
+          Whether it&apos;s a question about our services, a request for
+          technical assistance, or suggestions for improvement, our team is
+          eager to hear from you.
+        </Typography>
+        <div className='flex justify-center'>
+          <form
+            action='#'
+            className='flex flex-col gap-4 lg:max-w-sm'>
+            <div className='grid grid-cols-2 gap-4'>
+              <div>
+                <Typography
+                  variant='small'
+                  className='mb-2 text-left font-medium !text-gray-900'>
+                  First Name
+                </Typography>
+                <Input
+                  size='lg'
+                  placeholder='First Name'
+                  name='first-name'
+                  className='focus:border-t-gray-900'
+                />
+              </div>
+              <div>
+                <Typography
+                  variant='small'
+                  className='mb-2 text-left font-medium !text-gray-900'>
+                  Last Name
+                </Typography>
+                <Input
+                  size='lg'
+                  placeholder='Last Name'
+                  name='last-name'
+                  className='focus:border-t-gray-900'
+                />
+              </div>
+            </div>
+            <div>
+              <Typography
+                variant='small'
+                className='mb-2 text-left font-medium !text-gray-900'>
+                Your Email
+              </Typography>
+              <Input
+                size='lg'
+                placeholder='name@email.com'
+                name='email'
+                className='focus:border-t-gray-900'
+              />
+            </div>
+            <div>
+              <Typography
+                variant='small'
+                className='mb-2 text-left font-medium !text-gray-900'>
+                Your Message
+              </Typography>
+              <Textarea
+                rows={6}
+                placeholder='Message'
+                name='message'
+                className='focus:border-t-gray-900'
+              />
+            </div>
+            <Button className='w-full'>Send message</Button>
+          </form>
+        </div>
       </div>
-      <Button
-        type='submit'
-        className='w-full'>
-        Sign Up
-      </Button>
-      <Typography
-        type='small'
-        className='my-4 flex items-center justify-center gap-1 text-foreground'>
-        Already have an account?
-      </Typography>
-    </form>
+    </section>
   );
 }
 
-export default ContactForm;
+export default ContactSection14;
