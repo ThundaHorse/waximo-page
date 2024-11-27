@@ -9,6 +9,7 @@ import { m } from 'framer-motion';
 import axios from 'axios';
 import { EmailInputField, FormInputs, formSchema } from '@/components';
 import ReferralComponent from '@/components/refer-card';
+import Image from 'next/image';
 
 const Hero = () => {
   const [ipAddress, setIpAddress] = useState('');
@@ -108,7 +109,7 @@ const Hero = () => {
           transition={{ duration: 0.5, ease: 'easeIn' }}
           className='container mx-auto lg:mt-0 '>
           <div className='grid grid-cols-12'>
-            <div className='col-span-full rounded-xl bg-none bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7'>
+            <div className='col-span-full rounded-xl bg-none bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-100  xl:col-span-7'>
               <Typography
                 type='h5'
                 className='mb-4 text-left'
@@ -127,10 +128,10 @@ const Hero = () => {
               </Typography>
 
               {!showReferral ? (
-                <div className='w-full flex justify-center'>
+                <div className='w-full flex justify-start'>
                   <div className='flex w-full max-w-sm items-center gap-2'>
                     <form
-                      className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2'
+                      className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-start gap-2'
                       onSubmit={handleSubmit(onSubmit)}>
                       <EmailInputField
                         className='emailInput bg-white'
@@ -155,7 +156,7 @@ const Hero = () => {
                   </div>
                 </div>
               ) : (
-                <div className='w-full flex justify-center'>
+                <div className='w-full flex justify-start'>
                   <div className='flex w-full max-w-sm items-center gap-2'>
                     <ReferralComponent referrer={getValues('email')} />
                   </div>
@@ -184,6 +185,16 @@ const Hero = () => {
             less time maintaining your snowboard or ski equipment and more time
             on the slopes.
           </Typography>
+
+          <div className='flex align-middle mt-12 justify-center'>
+            <Image
+              width={600}
+              height={600}
+              src='/images/waximo.png'
+              className=''
+              alt='waximo'
+            />
+          </div>
         </div>
       </div>
     </>

@@ -7,12 +7,13 @@ export const FaqSection = () => {
   return (
     <>
       <section
-        className='px-8 py-20'
+        className='px-12 py-20'
         style={{ background: 'black' }}>
         <div className='container max-w-6xl mx-auto'>
           <Typography
-            type='h6'
-            className='text-white'>
+            type='h3'
+            className='text-white text-center'
+            style={{ color: '#d7ffc2' }}>
             FAQ
           </Typography>
 
