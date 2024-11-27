@@ -134,7 +134,7 @@ export function MobileConvenience() {
         </m.div>
 
         <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-12 rounded-lg'
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.5 },
