@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -30,7 +29,7 @@ type TextFieldProps = InputProps & {
   icon: React.ElementType;
 };
 
-const TextField = React.forwardRef<typeof Input.Field, TextFieldProps>(
+const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   ({ label, error, icon: Icon, ...props }, ref) => {
     const id = React.useId();
 

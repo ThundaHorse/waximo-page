@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import { Input, InputProps, Typography } from '@material-tailwind/react';
 import React from 'react';
 import { z } from 'zod';
