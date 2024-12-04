@@ -3,10 +3,13 @@ import { Typography } from '@material-tailwind/react';
 export const renderPrivacyPolicy = () => {
   return (
     <div>
-      <Typography type='h5'>
-        Privacy Policy **Last Updated: 11/11/2024
-      </Typography>
+      <Typography type='h6'>Privacy Policy</Typography>
 
+      <br />
+
+      <Typography>**Last Updated: 11/11/2024</Typography>
+
+      <br />
       <Typography>
         Welcome to waximo.com. We are committed to protecting your privacy and
         safeguarding your personal information.
@@ -28,9 +31,9 @@ export const renderPrivacyPolicy = () => {
         Act (PIPEDA), and other relevant privacy regulations.
       </Typography>
 
-      <Typography type='h6'>1. Information We Collect</Typography>
+      <Typography>1. Information We Collect</Typography>
 
-      <Typography type='h6'>A. Personal Information</Typography>
+      <Typography>A. Personal Information</Typography>
 
       <Typography>
         We may collect the following personal information directly from you when
@@ -41,7 +44,7 @@ export const renderPrivacyPolicy = () => {
         usage patterns and improve website functionality.
       </Typography>
 
-      <Typography type='h6'>B. Usage Data and Analytics</Typography>
+      <Typography>B. Usage Data and Analytics</Typography>
 
       <Typography>
         We use Google Analytics and other analytics software to collect data
@@ -53,7 +56,7 @@ export const renderPrivacyPolicy = () => {
         users.
       </Typography>
 
-      <Typography type='h6'>C. Cookies and Tracking Technologies</Typography>
+      <Typography>C. Cookies and Tracking Technologies</Typography>
 
       <Typography>
         We use cookies, beacons, tags, and scripts to enhance your experience on
@@ -62,7 +65,7 @@ export const renderPrivacyPolicy = () => {
         settings.
       </Typography>
 
-      <Typography type='h5'>2. How We Use Your Information</Typography>
+      <Typography>2. How We Use Your Information</Typography>
       <br />
       <Typography>
         We may use the information we collect for various purposes, including: -
@@ -76,7 +79,7 @@ export const renderPrivacyPolicy = () => {
         law.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         3. Legal Bases for Processing Personal Data (GDPR Compliance)
       </Typography>
       <br />
@@ -90,9 +93,9 @@ export const renderPrivacyPolicy = () => {
         comply with the law.
       </Typography>
       <br />
-      <Typography type='h5'>4. Your Rights and Choices</Typography>
+      <Typography>4. Your Rights and Choices</Typography>
       <br />
-      <Typography type='h6'>A. GDPR Rights (For Users in the EEA)</Typography>
+      <Typography>A. GDPR Rights (For Users in the EEA)</Typography>
       <br />
       <Typography>
         If you are an EEA resident, you have the following rights regarding your
@@ -131,9 +134,7 @@ export const renderPrivacyPolicy = () => {
         protection laws.
       </Typography>
 
-      <Typography type='h6'>
-        B. CCPA Rights (For California Residents)
-      </Typography>
+      <Typography>B. CCPA Rights (For California Residents)</Typography>
       <Typography>
         If you are a California resident, you have the following rights under
         the CCPA:
@@ -159,9 +160,7 @@ export const renderPrivacyPolicy = () => {
         </li>
       </ul>
 
-      <Typography type='h6'>
-        C. PIPEDA Rights (For Canadian Residents)
-      </Typography>
+      <Typography>C. PIPEDA Rights (For Canadian Residents)</Typography>
 
       <Typography>
         If you are a Canadian resident, PIPEDA grants you the following rights
@@ -190,13 +189,13 @@ export const renderPrivacyPolicy = () => {
         privacy laws.
       </Typography>
 
-      <Typography type='h6'>
+      <Typography>
         D. Managing Your Preferences You may unsubscribe from our emails or
         manage your cookie preferences at any time by following the instructions
         provided in the email or adjusting your browser settings.
       </Typography>
       <br />
-      <Typography type='h6'>
+      <Typography>
         5. Data Security and Retention We employ industry-standard security
         measures to protect your personal information, including SSL encryption
         and secure storage. However, no method of transmission over the internet
@@ -208,7 +207,7 @@ export const renderPrivacyPolicy = () => {
         delete or anonymize it.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         6. Disclosure of Your Information We may share your personal information
         in the following situations:
       </Typography>
@@ -230,7 +229,9 @@ export const renderPrivacyPolicy = () => {
         </li>
       </ul>
 
-      <Typography type='h5'>
+      <br />
+
+      <Typography>
         7. Automated Decision-Making and Profiling We may use automated
         decision-making and profiling technologies to analyze user behavior and
         provide personalized services or content. This includes using data from
@@ -242,7 +243,7 @@ export const renderPrivacyPolicy = () => {
         waximocompany@gmail.com.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         8. International Data Transfers Your information may be transferred
         to/from, stored, processed, and maintained on computers located outside
         your country or other governmental jurisdiction where data protection
@@ -251,7 +252,7 @@ export const renderPrivacyPolicy = () => {
         safeguards to protect your information.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         9. Third-Party Links and Services Our website may contain links to
         third-party websites or services that are not owned or controlled by
         waximo.com. We are not responsible for the privacy practices or content
@@ -259,7 +260,7 @@ export const renderPrivacyPolicy = () => {
         policies before providing personal information.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         10. Data Breach Notification In the event of a data breach that affects
         your personal information, we will promptly assess the situation and
         notify the appropriate regulatory authorities and affected users as
@@ -268,14 +269,14 @@ export const renderPrivacyPolicy = () => {
         affected data, and the steps we are taking to mitigate the impact.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         11. Do Not Track (DNT) Signals Our website does not respond to Do Not
         Track (DNT) signals from web browsers. However, you can still manage
         your tracking preferences via cookie settings or by adjusting your
         browser settings to control tracking.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         12. Changes in Business Ownership or Control In the event that
         waximo.com undergoes a business transition, such as a merger,
         acquisition, or sale of all or a portion of our assets, your personal
@@ -284,7 +285,7 @@ export const renderPrivacyPolicy = () => {
         data, if available.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         13. Sensitive Personal Information We do not intentionally collect
         sensitive personal information (such as race, ethnicity, religious
         beliefs, health data, or biometric information) unless explicitly stated
@@ -293,7 +294,7 @@ export const renderPrivacyPolicy = () => {
         information under this Privacy Policy.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         14. Children’s Privacy Our website is not intended for use by
         individuals under the age of 13 (or under the age of 16 for residents of
         certain jurisdictions). We do not knowingly collect personal information
@@ -301,7 +302,7 @@ export const renderPrivacyPolicy = () => {
         will take steps to delete it promptly.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         15. Changes to This Privacy Policy We may update this Privacy Policy
         from time to time to reflect changes in our practices or legal
         requirements. We will notify you of any material changes by posting the
@@ -310,13 +311,12 @@ export const renderPrivacyPolicy = () => {
         Policy.
       </Typography>
       <br />
-      <Typography type='h5'>
+      <Typography>
         16. Contact Us If you have any questions about this Privacy Policy,
         please contact us:
       </Typography>
       <ul>
-        <li>Email: waximocompany@gmail.com</li>
-        <li>Mail: [Company Address]</li>
+        <li>Email: privacy@waximo.com</li>
       </ul>
     </div>
   );
@@ -325,7 +325,7 @@ export const renderPrivacyPolicy = () => {
 export const renderTermsAndConditions = () => {
   return (
     <>
-      <Typography type='h5'>Terms & Conditions</Typography>
+      <Typography>Terms & Conditions</Typography>
       <Typography>
         These terms and conditions outline the rules and regulations for the use
         of WAXIMO's website, located at https://waximo.com, including all
@@ -352,7 +352,7 @@ export const renderTermsAndConditions = () => {
         interchangeable and therefore as referring to the same.
       </Typography>
       <br />
-      <Typography type='h5'>Cookies</Typography>
+      <Typography>Cookies</Typography>
       <Typography>
         We employ the use of cookies. By accessing WAXIMO, you agree to use
         cookies in agreement with WAXIMO's Privacy Policy. Most interactive
@@ -362,7 +362,7 @@ export const renderTermsAndConditions = () => {
         use cookies.
       </Typography>
       <br />
-      <Typography type='h5'>License</Typography>
+      <Typography>License</Typography>
       <Typography>
         Unless otherwise stated, WAXIMO and/or its licensors own the
         intellectual property rights for all material on WAXIMO. All
@@ -371,7 +371,7 @@ export const renderTermsAndConditions = () => {
         conditions.
       </Typography>
       <br />
-      <Typography type='h6'>You must not:</Typography>
+      <Typography>You must not:</Typography>
       <ul>
         <li>Republish material from WAXIMO</li>
         <li>Sell, rent, or sub-license material from WAXIMO</li>
@@ -379,11 +379,9 @@ export const renderTermsAndConditions = () => {
         <li>Redistribute content from WAXIMO</li>
       </ul>
       <br />
-      <Typography type='h6'>
-        This Agreement shall begin on the date hereof.
-      </Typography>
+      <Typography>This Agreement shall begin on the date hereof.</Typography>
       <br />
-      <Typography type='h5'>User Conduct and Acceptable Use</Typography>
+      <Typography>User Conduct and Acceptable Use</Typography>
       <Typography>By using WAXIMO, you agree not to:</Typography>
       <ul>
         <li>
@@ -401,14 +399,12 @@ export const renderTermsAndConditions = () => {
         </li>
       </ul>
       <br />
-      <Typography type='h6'>
+      <Typography>
         Any violation may result in termination of your access to the site
         without notice.
       </Typography>
       <br />
-      <Typography type='h5'>
-        User-Generated Content and DMCA Compliance
-      </Typography>
+      <Typography>User-Generated Content and DMCA Compliance</Typography>
       <Typography>
         Parts of this website allow users to post and exchange opinions and
         information. WAXIMO does not filter, edit, publish, or review Comments
@@ -441,13 +437,13 @@ export const renderTermsAndConditions = () => {
         </li>
       </ul>
       <br />
-      <Typography type='h6'>
+      <Typography>
         You hereby grant WAXIMO a non-exclusive license to use, reproduce, edit,
         and authorize others to use, reproduce, and edit any of your Comments in
         any form, format, or media.
       </Typography>
       <br />
-      <Typography type='h5'>Community Guidelines</Typography>
+      <Typography>Community Guidelines</Typography>
       <Typography>
         WAXIMO aims to provide a welcoming and respectful environment for all
         users. By participating in any interactive sections of the website,
@@ -472,7 +468,7 @@ export const renderTermsAndConditions = () => {
         users who engage in disruptive or harmful behavior.
       </Typography>
       <br />
-      <Typography type='h5'>Hyperlinking to Our Content</Typography>
+      <Typography>Hyperlinking to Our Content</Typography>
       <Typography>
         We do not allow any external websites or entities to hyperlink to our
         website content without explicit written permission. Unauthorized
@@ -483,7 +479,7 @@ export const renderTermsAndConditions = () => {
         and without providing a reason.
       </Typography>
       <br />
-      <Typography type='h5'>Third-Party Links and Advertisements</Typography>
+      <Typography>Third-Party Links and Advertisements</Typography>
       <Typography>
         Our website may include links to external websites or advertisements for
         third-party products and services. We do not endorse, monitor, or
@@ -491,7 +487,7 @@ export const renderTermsAndConditions = () => {
         content, accuracy, or policies on third-party websites.
       </Typography>
       <br />
-      <Typography type='h5'>Intellectual Property Protection</Typography>
+      <Typography>Intellectual Property Protection</Typography>
       <Typography>
         The WAXIMO name, brand, logo, and other identifying trademarks are the
         exclusive property of WAXIMO. Unauthorized use of our name, brand, logo,
@@ -506,14 +502,14 @@ export const renderTermsAndConditions = () => {
         such requests at its sole discretion and without explanation.
       </Typography>
       <br />
-      <Typography type='h5'>iFrames</Typography>
+      <Typography>iFrames</Typography>
       <Typography>
         Without prior approval and written permission, you may not create frames
         around our webpages that alter in any way the visual presentation or
         appearance of our Website.
       </Typography>
       <br />
-      <Typography type='h5'>Content Liability</Typography>
+      <Typography>Content Liability</Typography>
       <Typography>
         We shall not be held responsible for any content appearing on your
         website. You agree to protect and defend us against all claims arising
@@ -522,10 +518,10 @@ export const renderTermsAndConditions = () => {
         third-party rights.
       </Typography>
       <br />
-      <Typography type='h5'>Your Privacy</Typography>
+      <Typography>Your Privacy</Typography>
       <Typography>Please read our Privacy Policy.</Typography>
       <br />
-      <Typography type='h5'>Limitation of Liability</Typography>
+      <Typography>Limitation of Liability</Typography>
       <Typography>
         Under no circumstances shall WAXIMO, its directors, employees, or
         agents, be liable for any indirect, incidental, or consequential damages
@@ -534,7 +530,7 @@ export const renderTermsAndConditions = () => {
         access the site.
       </Typography>
       <br />
-      <Typography type='h5'>Indemnification</Typography>
+      <Typography>Indemnification</Typography>
       <Typography>
         You agree to indemnify, defend, and hold harmless WAXIMO, its
         affiliates, and their respective officers, directors, employees, and
@@ -544,7 +540,7 @@ export const renderTermsAndConditions = () => {
         third-party rights.
       </Typography>
       <br />
-      <Typography type='h5'>Termination</Typography>
+      <Typography>Termination</Typography>
       <Typography>
         We reserve the right to suspend or terminate your access to WAXIMO
         without prior notice if you breach these Terms and Conditions or engage
@@ -552,7 +548,7 @@ export const renderTermsAndConditions = () => {
         WAXIMO.
       </Typography>
       <br />
-      <Typography type='h5'>Governing Law and Dispute Resolution</Typography>
+      <Typography>Governing Law and Dispute Resolution</Typography>
       <Typography>
         These Terms and Conditions shall be governed by and construed in
         accordance with applicable laws without regard to conflict of law
@@ -576,14 +572,14 @@ export const renderTermsAndConditions = () => {
         property pending the outcome of arbitration.
       </Typography>
       <br />
-      <Typography type='h5'>Modifications to the Terms</Typography>
+      <Typography>Modifications to the Terms</Typography>
       <Typography>
         We reserve the right to update or modify these Terms and Conditions at
         any time without prior notice. Your continued use of the website after
         any modifications constitutes acceptance of the revised Terms.
       </Typography>
       <br />
-      <Typography type='h5'>Force Majuere</Typography>
+      <Typography>Force Majuere</Typography>
       <Typography>
         WAXIMO shall not be held liable for any failure or delay in performance
         due to causes beyond its reasonable control, including but not limited
@@ -591,7 +587,7 @@ export const renderTermsAndConditions = () => {
         internet services.
       </Typography>
       <br />
-      <Typography type='h5'>Reservation of Rights</Typography>
+      <Typography>Reservation of Rights</Typography>
       <Typography>
         We reserve the right to request that you remove all links or any
         particular link to our Website. You agree to immediately remove all
@@ -601,14 +597,14 @@ export const renderTermsAndConditions = () => {
         linking terms and conditions.
       </Typography>
       <br />
-      <Typography type='h5'>Removal of Links from our Website</Typography>
+      <Typography>Removal of Links from our Website</Typography>
       <Typography>
         If you find any link on our Website that you find offensive for any
         reason, you are free to contact us at any time. We will consider
         requests to remove links but are not obligated to respond directly.
       </Typography>
       <br />
-      <Typography type='h5'>Disclaimer and Liability</Typography>
+      <Typography>Disclaimer and Liability</Typography>
       <Typography>
         To the maximum extent permitted by law, we exclude all representations,
         warranties, and conditions relating to our website and its use. Nothing
@@ -634,7 +630,7 @@ export const renderTermsAndConditions = () => {
         error-free content. Use of the site is at your own risk.
       </Typography>
       <br />
-      <Typography type='h5'>Disclaimer of Professional Advice</Typography>
+      <Typography>Disclaimer of Professional Advice</Typography>
       <Typography>
         The information provided on WAXIMO is for general informational purposes
         only and should not be considered professional advice. Always seek the
@@ -643,7 +639,7 @@ export const renderTermsAndConditions = () => {
         actions taken by users based on information on this site.
       </Typography>
       <br />
-      <Typography type='h5'>Severability</Typography>
+      <Typography>Severability</Typography>
       <Typography>
         If any provision of these Terms is deemed invalid, the remaining
         provisions remain in full effect.

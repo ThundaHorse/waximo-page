@@ -29,10 +29,10 @@ export function ContactSection() {
       <div className='container mx-auto text-center'>
         <Typography
           variant='h2'
-          className='mb-4 !text-3xl lg:!text-5xl'>
+          className='mb-8 !text-3xl lg:!text-5xl'>
           Contact Us
         </Typography>
-        <Typography className='mb-6 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-gray-500'>
+        <Typography className='mb-6 font-normal !text-lg lg:mb-8 mx-auto max-w-3xl !text-gray-500'>
           Leave a message with any questions, feedback or other issues you may
           have.
         </Typography>
@@ -86,7 +86,7 @@ export function ContactSection() {
               </Typography>
               <Input
                 size='lg'
-                placeholder='Last Name'
+                placeholder='example@example.com'
                 value={email}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setEmail(e.target.value)
