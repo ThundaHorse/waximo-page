@@ -218,9 +218,7 @@ const Footer = () => {
                           </Dialog.DismissTrigger>
                         </div>
 
-                        <div className=''>
-                          <ContactForm />
-                        </div>
+                        <ContactForm />
 
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
                           <Dialog.DismissTrigger
