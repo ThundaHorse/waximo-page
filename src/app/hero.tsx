@@ -159,7 +159,7 @@ const Hero = () => {
                   </div>
                 </div>
               ) : (
-                <div className='w-full flex justify-start'>
+                <div className='w-full flex justify-center'>
                   <div className='flex w-full max-w-sm items-center gap-2'>
                     <ReferralComponent referrer={getValues('email')} />
                   </div>

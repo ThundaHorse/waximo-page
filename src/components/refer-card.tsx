@@ -76,7 +76,10 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
             className='mb-12 text-center'>
             Congratulations on staying in the Loop!
           </Typography>
-
+          <span className='text-sm font-semibold text-center mb-4'>
+            Refer your friends! Enter the email address and press "Add Referral"
+            or press "Enter" to add multiple recipients.
+          </span>
           <div className='flex flex-wrap justify-center items-center gap-2 mb-8'>
             {referrals.map((val) => (
               <Chip
@@ -99,7 +102,6 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
             <EmailInputField
               type='email'
               className='referralInput'
-              label='Refer your friends! Enter the email and press "Add Referral" or press "Enter" to add multiple recipients.'
               error={emailError}
               icon={EnvelopeIcon}
               placeholder='example@example.com'
@@ -108,7 +110,7 @@ const ReferralComponent = ({ referrer }: ReferralProps) => {
               {...register('email')}
             />
 
-            <div className='flex gap-4 justify-between'>
+            <div className='mt-4 flex gap-4 justify-between'>
               <Button
                 size='md'
                 type='submit'
