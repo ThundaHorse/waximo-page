@@ -4,7 +4,7 @@ import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700', '900'],
+  // weight: ['300', '400', '500', '700', '900'],
   display: 'swap',
 });
 
@@ -43,7 +43,7 @@ export default function RootLayout({
           content='Coming Soon!'
         />
       </head>
-      <body className={montserrat.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

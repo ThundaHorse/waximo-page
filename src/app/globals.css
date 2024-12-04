@@ -20,6 +20,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.font-sans,
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .hero-section {
   height: 100vh;
   background-image: url('../../public/images/hero.webp');
