@@ -123,7 +123,6 @@ const Footer = () => {
                     <Dialog.Overlay>
                       <Dialog.Content>
                         <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Typography type='h6'>Privacy Policy</Typography>
                           <Dialog.DismissTrigger
                             as={IconButton}
                             size='sm'
@@ -136,7 +135,9 @@ const Footer = () => {
                         </div>
 
                         <div className='overflow-y-auto'>
-                          {renderPrivacyPolicy()}
+                          <section className='px-10 py-2 lg:py-16'>
+                            {renderPrivacyPolicy()}
+                          </section>
                         </div>
 
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
@@ -165,7 +166,6 @@ const Footer = () => {
                     <Dialog.Overlay>
                       <Dialog.Content>
                         <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Typography type='h6'>Terms & Conditions</Typography>
                           <Dialog.DismissTrigger
                             as={IconButton}
                             size='sm'
@@ -178,7 +178,9 @@ const Footer = () => {
                         </div>
 
                         <div className='overflow-y-auto'>
-                          {renderTermsAndConditions()}
+                          <section className='px-10 py-2 lg:py-16'>
+                            {renderTermsAndConditions()}
+                          </section>
                         </div>
 
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
