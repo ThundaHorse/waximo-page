@@ -25,7 +25,7 @@ export function ContactSection14() {
   };
 
   return (
-    <section className='px-10 py-10 lg:py-16'>
+    <section className='px-10 py-2 lg:py-16'>
       <div className='container mx-auto text-center'>
         <Typography
           variant='h2'
