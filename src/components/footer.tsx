@@ -207,6 +207,18 @@ const Footer = () => {
                     <Dialog.Overlay>
                       <Dialog.Content>
                         <div className='mb-4 flex items-center justify-between gap-4'>
+                          {/* <Dialog.DismissTrigger
+                            as={IconButton}
+                            size='sm'
+                            variant='ghost'
+                            color='secondary'
+                            isCircular
+                            className='absolute right-2 top-2'>
+                            <i className='fa-solid fa-x h-5 w-5'></i>
+                          </Dialog.DismissTrigger> */}
+                        </div>
+
+                        <div className='overflow-y-auto'>
                           <Dialog.DismissTrigger
                             as={IconButton}
                             size='sm'
@@ -216,19 +228,24 @@ const Footer = () => {
                             className='absolute right-2 top-2'>
                             <i className='fa-solid fa-x h-5 w-5'></i>
                           </Dialog.DismissTrigger>
-                        </div>
-
-                        <div className='overflow-y-auto'>
                           <ContactForm />
+
+                          <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                            <Dialog.DismissTrigger
+                              as={Button}
+                              color='error'>
+                              Cancel
+                            </Dialog.DismissTrigger>
+                          </div>
                         </div>
 
-                        <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        {/* <div className='mt-12 flex w-full items-center justify-end gap-2'>
                           <Dialog.DismissTrigger
                             as={Button}
                             color='error'>
                             Cancel
                           </Dialog.DismissTrigger>
-                        </div>
+                        </div> */}
                       </Dialog.Content>
                     </Dialog.Overlay>
                   </Dialog>
