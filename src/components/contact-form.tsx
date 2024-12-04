@@ -25,17 +25,16 @@ export function ContactSection14() {
   };
 
   return (
-    <section className='px-8 py-8 lg:py-16'>
+    <section className='px-10 py-10 lg:py-16'>
       <div className='container mx-auto text-center'>
         <Typography
-          variant='h1'
+          variant='h2'
           className='mb-4 !text-3xl lg:!text-5xl'>
-          We&apos;re Here to Help
+          Contact Us
         </Typography>
-        <Typography className='mb-10 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-gray-500'>
-          Whether it&apos;s a question about our services, a request for
-          technical assistance, or suggestions for improvement, our team is
-          eager to hear from you.
+        <Typography className='mb-6 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-gray-500'>
+          Leave a message with any questions, feedback or other issues you may
+          have.
         </Typography>
         <div className='flex justify-center'>
           <form

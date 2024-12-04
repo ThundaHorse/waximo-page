@@ -100,7 +100,7 @@ const Footer = () => {
               <Image
                 width={300}
                 height={50}
-                src='/images/Logo1.webp'
+                src='/images/waximo-footer-logo.png'
                 className=''
                 alt='Logo'
               />

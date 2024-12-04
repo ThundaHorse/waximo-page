@@ -92,7 +92,7 @@ const Hero = () => {
   const emailError = errors.email?.message;
 
   return (
-    <>
+    <section id='hero-section'>
       <div className='hero-section !flex h-[90vh] w-full items-center justify-between px-10'>
         <div hidden={!signUpSuccessful}>
           <Alert
@@ -197,7 +197,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 export default Hero;

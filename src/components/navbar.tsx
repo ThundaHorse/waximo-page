@@ -8,9 +8,9 @@ import Image from 'next/image';
 
 const LINKS = [
   {
-    title: 'Features',
-    href: 'feature-section',
-    id: 'nav-features',
+    title: 'Sign Up',
+    href: 'hero-section',
+    id: 'nav-hero',
   },
   {
     title: 'FAQ',
@@ -62,15 +62,15 @@ export function SimpleNavbar() {
     <Navbar
       className='w-full border-none'
       style={{ background: '#2c2c2c' }}>
-      <div className='flex items-center p-5'>
+      <div className='flex items-center p-2'>
         <a
           href='#'
           type='small'
           className='mx-2 block py-1 font-semibold'>
           <Image
-            width={200}
+            width={60}
             height={50}
-            src='/images/Logo1.webp'
+            src='/images/waximo-header-logo.png'
             className=''
             alt='Logo'
           />
