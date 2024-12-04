@@ -135,9 +135,7 @@ const Footer = () => {
                         </div>
 
                         <div className='overflow-y-auto'>
-                          <section className='px-10 py-2 lg:py-16'>
-                            {renderPrivacyPolicy()}
-                          </section>
+                          {renderPrivacyPolicy()}
                         </div>
 
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
@@ -178,9 +176,7 @@ const Footer = () => {
                         </div>
 
                         <div className='overflow-y-auto'>
-                          <section className='px-10 py-2 lg:py-16'>
-                            {renderTermsAndConditions()}
-                          </section>
+                          {renderTermsAndConditions()}
                         </div>
 
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
