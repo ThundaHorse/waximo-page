@@ -96,142 +96,21 @@ const Footer = () => {
       <footer className='bg-gray-900 px-8 pt-12'>
         <div className='container mx-auto'>
           <div className='flex flex-wrap justify-center gap-8 md:justify-between'>
-            <div className='text-center md:text-left'>
+            <div className='mt-8 flex flex-col items-center text-center md:text-left'>
               <Image
-                width={300}
+                width={100}
                 height={50}
-                src='/images/waximo-footer-logo.png'
-                className=''
+                src='/images/waximologo2.png'
+                className='mb-4'
                 alt='Logo'
               />
 
               <Typography className='mb-12 font-normal text-white'>
                 The all-in-one waxing tool for snow gear
               </Typography>
-              <ul className='flex flex-wrap items-center justify-center md:justify-start'>
-                <m.li
-                  initial={{ opacity: 0, scale: 1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, ease: 'easeIn' }}>
-                  <Dialog>
-                    <Dialog.Trigger
-                      as={Button}
-                      variant='ghost'
-                      className='text-white lg:pl-0 pl-4'>
-                      Privacy Policy
-                    </Dialog.Trigger>
-                    <Dialog.Overlay>
-                      <Dialog.Content>
-                        <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Dialog.DismissTrigger
-                            as={IconButton}
-                            size='sm'
-                            variant='ghost'
-                            color='secondary'
-                            isCircular
-                            className='absolute right-2 top-2'>
-                            <i className='fa-solid fa-x h-5 w-5'></i>
-                          </Dialog.DismissTrigger>
-                        </div>
-
-                        <div className='overflow-y-auto'>
-                          {renderPrivacyPolicy()}
-                        </div>
-
-                        <div className='mt-12 flex w-full items-center justify-end gap-2'>
-                          <Dialog.DismissTrigger
-                            as={Button}
-                            color='error'>
-                            Cancel
-                          </Dialog.DismissTrigger>
-                        </div>
-                      </Dialog.Content>
-                    </Dialog.Overlay>
-                  </Dialog>
-                </m.li>
-
-                <m.li
-                  initial={{ opacity: 0, scale: 1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, ease: 'easeIn' }}>
-                  <Dialog>
-                    <Dialog.Trigger
-                      as={Button}
-                      variant='ghost'
-                      className='text-white lg:pl-0 pl-4'>
-                      Terms & Conditions
-                    </Dialog.Trigger>
-                    <Dialog.Overlay>
-                      <Dialog.Content>
-                        <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Dialog.DismissTrigger
-                            as={IconButton}
-                            size='sm'
-                            variant='ghost'
-                            color='secondary'
-                            isCircular
-                            className='absolute right-2 top-2'>
-                            <i className='fa-solid fa-x h-5 w-5'></i>
-                          </Dialog.DismissTrigger>
-                        </div>
-
-                        <div className='overflow-y-auto'>
-                          {renderTermsAndConditions()}
-                        </div>
-
-                        <div className='mt-12 flex w-full items-center justify-end gap-2'>
-                          <Dialog.DismissTrigger
-                            as={Button}
-                            color='error'>
-                            Cancel
-                          </Dialog.DismissTrigger>
-                        </div>
-                      </Dialog.Content>
-                    </Dialog.Overlay>
-                  </Dialog>
-                </m.li>
-
-                <m.li
-                  initial={{ opacity: 0, scale: 1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, ease: 'easeIn' }}>
-                  <Dialog>
-                    <Dialog.Trigger
-                      as={Button}
-                      variant='ghost'
-                      className='text-white lg:pl-0 pl-4'>
-                      Contact
-                    </Dialog.Trigger>
-                    <Dialog.Overlay>
-                      <Dialog.Content>
-                        <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Dialog.DismissTrigger
-                            as={IconButton}
-                            size='sm'
-                            variant='ghost'
-                            color='secondary'
-                            isCircular
-                            className='absolute right-2 top-2'>
-                            <i className='fa-solid fa-x h-5 w-5'></i>
-                          </Dialog.DismissTrigger>
-                        </div>
-
-                        <ContactForm />
-
-                        <div className='mt-12 flex w-full items-center justify-end gap-2'>
-                          <Dialog.DismissTrigger
-                            as={Button}
-                            color='error'>
-                            Cancel
-                          </Dialog.DismissTrigger>
-                        </div>
-                      </Dialog.Content>
-                    </Dialog.Overlay>
-                  </Dialog>
-                </m.li>
-              </ul>
             </div>
-            <div className='mt-8 w-full md:mt-0 md:w-auto'>
+
+            <div className='mt-8'>
               <Typography
                 variant='h6'
                 className='mb-3 text-center text-white'>
@@ -253,16 +132,20 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
+            </div>
 
+            <div className='mt-8 w-full md:mt-0 md:w-auto'>
               <div className='w-full flex justify-end'>
-                <div className='flex w-full max-w-sm items-end gap-2'>
+                <div className='mt-8 flex flex-col w-full max-w-sm gap-2 items-center'>
+                  <span className='text-center text-white mb-4 text-sm font-semibold'>
+                    Sign up now for Exclusive Updates!
+                  </span>
                   <form
                     className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2 text-white'
                     onSubmit={handleSubmit(onSubmit)}>
                     <EmailInputField
                       className='emailInput bg-white'
                       type='email'
-                      label='Sign up now for Exclusive Updates!'
                       error={emailError}
                       icon={EnvelopeIcon}
                       placeholder='example@example.com'
@@ -284,9 +167,132 @@ const Footer = () => {
             </div>
           </div>
           <div className='mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between'>
-            <Typography className='text-white'>
+            <Typography className='text-white text-center'>
               Copyright © 2024 WAXIMO LLC. All rights reserved.
             </Typography>
+
+            <ul className='flex flex-wrap items-center justify-center md:justify-start'>
+              <m.li
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: 'easeIn' }}>
+                <Dialog>
+                  <Dialog.Trigger
+                    as={Button}
+                    variant='ghost'
+                    className='text-white lg:pl-0 pl-4'>
+                    Privacy Policy
+                  </Dialog.Trigger>
+                  <Dialog.Overlay>
+                    <Dialog.Content>
+                      <div className='mb-4 flex items-center justify-between gap-4'>
+                        <Dialog.DismissTrigger
+                          as={IconButton}
+                          size='sm'
+                          variant='ghost'
+                          color='secondary'
+                          isCircular
+                          className='absolute right-2 top-2'>
+                          <i className='fa-solid fa-x h-5 w-5'></i>
+                        </Dialog.DismissTrigger>
+                      </div>
+
+                      <div className='overflow-y-auto'>
+                        {renderPrivacyPolicy()}
+                      </div>
+
+                      <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        <Dialog.DismissTrigger
+                          as={Button}
+                          color='error'>
+                          Cancel
+                        </Dialog.DismissTrigger>
+                      </div>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog>
+              </m.li>
+
+              <m.li
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: 'easeIn' }}>
+                <Dialog>
+                  <Dialog.Trigger
+                    as={Button}
+                    variant='ghost'
+                    className='text-white lg:pl-0 pl-4'>
+                    Terms & Conditions
+                  </Dialog.Trigger>
+                  <Dialog.Overlay>
+                    <Dialog.Content>
+                      <div className='mb-4 flex items-center justify-between gap-4'>
+                        <Dialog.DismissTrigger
+                          as={IconButton}
+                          size='sm'
+                          variant='ghost'
+                          color='secondary'
+                          isCircular
+                          className='absolute right-2 top-2'>
+                          <i className='fa-solid fa-x h-5 w-5'></i>
+                        </Dialog.DismissTrigger>
+                      </div>
+
+                      <div className='overflow-y-auto'>
+                        {renderTermsAndConditions()}
+                      </div>
+
+                      <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        <Dialog.DismissTrigger
+                          as={Button}
+                          color='error'>
+                          Cancel
+                        </Dialog.DismissTrigger>
+                      </div>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog>
+              </m.li>
+
+              <m.li
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: 'easeIn' }}>
+                <Dialog>
+                  <Dialog.Trigger
+                    as={Button}
+                    variant='ghost'
+                    className='text-white lg:pl-0 pl-4'>
+                    Contact
+                  </Dialog.Trigger>
+                  <Dialog.Overlay>
+                    <Dialog.Content>
+                      <div className='mb-4 flex items-center justify-between gap-4'>
+                        <Dialog.DismissTrigger
+                          as={IconButton}
+                          size='sm'
+                          variant='ghost'
+                          color='secondary'
+                          isCircular
+                          className='absolute right-2 top-2'>
+                          <i className='fa-solid fa-x h-5 w-5'></i>
+                        </Dialog.DismissTrigger>
+                      </div>
+
+                      <ContactForm />
+
+                      <div className='mt-12 flex w-full items-center justify-end gap-2'>
+                        <Dialog.DismissTrigger
+                          as={Button}
+                          color='error'>
+                          Cancel
+                        </Dialog.DismissTrigger>
+                      </div>
+                    </Dialog.Content>
+                  </Dialog.Overlay>
+                </Dialog>
+              </m.li>
+            </ul>
           </div>
         </div>
       </footer>

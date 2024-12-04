@@ -1,3 +1,5 @@
+'use client';
+
 // components
 import Footer from '@/components/footer';
 

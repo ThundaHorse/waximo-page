@@ -35,7 +35,7 @@ export default function RootLayout({
         />
         <link
           rel='shortcut icon'
-          href='/favicon.ico'
+          href='/waximofavicon.ico'
           type='image/ico'
         />
         <meta

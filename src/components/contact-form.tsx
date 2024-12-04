@@ -3,7 +3,7 @@
 import React, { FormEvent, useState } from 'react';
 import { Button, Input, Textarea, Typography } from '@material-tailwind/react';
 
-export function ContactSection14() {
+export function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -126,4 +126,4 @@ export function ContactSection14() {
   );
 }
 
-export default ContactSection14;
+export default ContactSection;
