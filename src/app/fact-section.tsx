@@ -18,7 +18,7 @@ export const FaqSection = () => {
             FAQ
           </Typography>
 
-          <Accordion defaultValue='how-to'>
+          <Accordion defaultValue=''>
             <Accordion.Item
               value='how-to'
               className='p-5'>
