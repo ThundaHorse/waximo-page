@@ -176,7 +176,7 @@ const Hero = () => {
         <div>
           <Typography
             type='h5'
-            className='text-center mb-12'
+            className='text-center mb-12 mt-12'
             style={{ color: '#d7ffc2' }}>
             What is WAXIMO?
           </Typography>

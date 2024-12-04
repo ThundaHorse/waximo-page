@@ -12,16 +12,16 @@ export function MobileConvenience() {
   return (
     <section
       id='feature-section'
-      className='py-20'>
+      className='py-20 pb-0'>
       <Section>
         <div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-32 bg-opacity-75 p-0 lg:p-12'
-          style={{ background: '#2c2c2c', color: 'white' }}>
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 sm:mt-10 mx-auto items-center bg-opacity-75 p-0 lg:p-12'
+          style={{ background: 'black', color: 'white' }}>
           <Image
             width={256}
             height={256}
             src='/images/Slide1.png'
-            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
+            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block p-0 lg:p-20 md:p-16 mt-6'
             alt='Snowboard'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -39,7 +39,7 @@ export function MobileConvenience() {
               protect your investments.
             </Typography>
 
-            <div className='col-span-2 flex flex-col'>
+            <div className='col-span-2 flex flex-col mb-6'>
               {OPTIONS.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -52,13 +52,13 @@ export function MobileConvenience() {
         </div>
 
         <div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
-          style={{ background: 'black', color: 'white' }}>
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center bg-gray-300 bg-opacity-75 p-0 lg:p-12'
+          style={{ background: '#2c2c2c', color: 'white' }}>
           <Image
             width={256}
             height={256}
             src='/images/Slide2.png'
-            className='col-span-1 w-1/2 mt-6 mb-6 mx-auto lg:w-10/12 rounded-lg lg:block'
+            className='col-span-1 w-1/2 mt-6 mb-6 mx-auto lg:w-10/12 rounded-lg p-0 lg:p-20 md:p-16 lg:block'
             alt='Downhill'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -77,7 +77,7 @@ export function MobileConvenience() {
               your confidence on the slopes.
             </Typography>
 
-            <div className='col-span-2 flex flex-col'>
+            <div className='col-span-2 flex flex-col mb-6'>
               {OPTIONS2.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -90,13 +90,13 @@ export function MobileConvenience() {
         </div>
 
         <div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
-          style={{ background: '#2c2c2c', color: 'white' }}>
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center bg-gray-300 bg-opacity-75 p-0 lg:p-12'
+          style={{ background: 'black', color: 'white' }}>
           <Image
             width={256}
             height={256}
             src='/images/Slide3.png'
-            className='col-span-1 w-1/2 mx-auto lg:w-10/12 rounded-lg lg:block'
+            className='col-span-1 w-1/2  mt-6 mb-6 mx-auto lg:w-10/12 rounded-lg p-0 lg:p-20 md:p-16 lg:block'
             alt='Family'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -114,7 +114,7 @@ export function MobileConvenience() {
               and let WAXIMO do the job from start to finish.
             </Typography>
 
-            <div className='col-span-2 flex flex-col'>
+            <div className='col-span-2 flex flex-col mb-6'>
               {OPTIONS3.map(({ title, description }) => (
                 <InfoCard
                   key={title}
@@ -127,13 +127,13 @@ export function MobileConvenience() {
         </div>
 
         <div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
-          style={{ background: 'black', color: 'white' }}>
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center bg-gray-300 bg-opacity-75 p-0 lg:p-12'
+          style={{ background: '#2c2c2c', color: 'white' }}>
           <Image
             width={256}
             height={256}
             src='/images/Slide4-1.png'
-            className='col-span-1 w-1/2 mt-6 mb-6 mx-auto lg:w-10/12 rounded-lg lg:block'
+            className='col-span-1 w-1/2 mt-6 mb-6 mx-auto lg:w-10/12 rounded-lg p-0 lg:p-20 md:p-16 lg:block'
             alt='Family'
           />
           <div className='col-span-1 mx-auto max-w-lg px-4 lg:px-0'>
@@ -153,7 +153,7 @@ export function MobileConvenience() {
               alternatives.
             </Typography>
 
-            <div className='col-span-2 flex flex-col'>
+            <div className='col-span-2 flex flex-col mb-6'>
               {OPTIONS4.map(({ title, description }) => (
                 <InfoCard
                   key={title}
