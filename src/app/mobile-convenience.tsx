@@ -161,7 +161,7 @@ export function MobileConvenience() {
             </Typography>
             <Typography
               type='small'
-              className='mb-12 text-center text-lg px-0'>
+              className='mb-12 text-left text-lg px-0'>
               WAXIMO makes the perfect gift, without the need to think about the
               recipient’s size, preferences, and other gifting factors. WAXIMO
               is a tool that can be used by snowboarders at all levels and is
