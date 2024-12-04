@@ -112,31 +112,34 @@ const Hero = () => {
             <div className='col-span-full rounded-xl bg-slate-300 bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-100  xl:col-span-7'>
               <Typography
                 type='h5'
-                className='mb-4 text-left'
+                className='mb-4 text-center'
                 style={{ color: '#d7ffc2' }}>
                 Need a better way to wax your snow gear?
               </Typography>
 
               <Typography
                 type='h5'
-                className='mb-4 text-left'>
+                className='mb-4 text-center'>
                 Introducing
               </Typography>
 
-              <Typography className='mb-4 text-left'>
+              <Typography className='mb-4 text-center'>
                 WAXIMO, the all-in-one waxing tool for snow gear
               </Typography>
 
+              <Typography className='text-sm font-semibold text-center mb-4'>
+                Sign up now for Exclusive Updates!
+              </Typography>
+
               {!showReferral ? (
-                <div className='w-full flex justify-start'>
+                <div className='w-full flex justify-center'>
                   <div className='flex w-full max-w-sm items-center gap-2'>
                     <form
-                      className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-start gap-2'
+                      className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2 align-baseline'
                       onSubmit={handleSubmit(onSubmit)}>
                       <EmailInputField
                         className='emailInput bg-white'
                         type='email'
-                        label='Sign up now for Exclusive Updates!'
                         error={emailError}
                         icon={EnvelopeIcon}
                         placeholder='example@example.com'

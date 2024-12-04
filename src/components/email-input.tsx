@@ -11,7 +11,7 @@ export const formSchema = z.object({
 export type FormInputs = z.infer<typeof formSchema>;
 
 type EmailInputProps = InputProps & {
-  label: string;
+  // label: string;
   error?: string;
   icon: React.ElementType;
 };
@@ -19,15 +19,14 @@ type EmailInputProps = InputProps & {
 export const EmailInputField = React.forwardRef<
   HTMLInputElement,
   EmailInputProps
->(({ label, error, icon: Icon, ...props }, ref) => {
+>(({ error, icon: Icon, ...props }, ref) => {
   const id = React.useId();
 
   return (
     <label
       htmlFor={id}
       color='default'
-      className='mb-6 block space-y-1.5'>
-      <span className='text-sm font-semibold'>{label}</span>
+      className='block space-y-1.5'>
       <Input
         isError={Boolean(error)}
         ref={ref}
