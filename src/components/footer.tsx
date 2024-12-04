@@ -202,12 +202,11 @@ const Footer = () => {
                       as={Button}
                       variant='ghost'
                       className='text-white lg:pl-0 pl-4'>
-                      Contact Us
+                      Contact
                     </Dialog.Trigger>
                     <Dialog.Overlay>
                       <Dialog.Content>
                         <div className='mb-4 flex items-center justify-between gap-4'>
-                          <Typography type='h6'>Contact Us</Typography>
                           <Dialog.DismissTrigger
                             as={IconButton}
                             size='sm'
