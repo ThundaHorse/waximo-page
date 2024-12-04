@@ -168,7 +168,7 @@ const Hero = () => {
       </div>
 
       <div
-        className='mx-8 lg:mx-16 lg:-mt-24 -mt-1 rounded-xl bg-white p-5 md:p-14 shadow-md'
+        className='lg:-mt-24 -mt-1 bg-white p-5 md:p-14'
         style={{ background: '#2c2c2c' }}>
         <div>
           <Typography

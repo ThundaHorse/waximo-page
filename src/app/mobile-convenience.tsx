@@ -12,15 +12,11 @@ export function MobileConvenience() {
   return (
     <section
       id='feature-section'
-      className='py-20 px-8'>
+      className='py-20'>
       <Section>
-        <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-opacity-75 p-0 lg:p-12 rounded-lg'
-          style={{ background: '#2c2c2c', color: 'white' }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.5 },
-          }}>
+        <div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-32 bg-opacity-75 p-0 lg:p-12'
+          style={{ background: '#2c2c2c', color: 'white' }}>
           <Image
             width={256}
             height={256}
@@ -53,14 +49,10 @@ export function MobileConvenience() {
               ))}
             </div>
           </div>
-        </m.div>
+        </div>
 
-        <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12 rounded-lg'
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.5 },
-          }}
+        <div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
           style={{ background: 'black', color: 'white' }}>
           <Image
             width={256}
@@ -95,15 +87,11 @@ export function MobileConvenience() {
               ))}
             </div>
           </div>
-        </m.div>
+        </div>
 
-        <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-0 lg:p-12 rounded-lg'
-          style={{ background: '#2c2c2c', color: 'white' }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.5 },
-          }}>
+        <div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-32 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
+          style={{ background: '#2c2c2c', color: 'white' }}>
           <Image
             width={256}
             height={256}
@@ -136,14 +124,10 @@ export function MobileConvenience() {
               ))}
             </div>
           </div>
-        </m.div>
+        </div>
 
-        <m.div
-          className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12 rounded-lg'
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.5 },
-          }}
+        <div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto items-center mb-24 bg-gray-300 bg-opacity-75 p-0 lg:p-12'
           style={{ background: 'black', color: 'white' }}>
           <Image
             width={256}
@@ -179,7 +163,7 @@ export function MobileConvenience() {
               ))}
             </div>
           </div>
-        </m.div>
+        </div>
       </Section>
     </section>
   );
