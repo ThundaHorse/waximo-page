@@ -205,7 +205,7 @@ const Footer = () => {
                       Contact
                     </Dialog.Trigger>
                     <Dialog.Overlay>
-                      <Dialog.Content>
+                      <Dialog.Content className='py-4'>
                         <div className='mb-4 flex items-center justify-between gap-4'>
                           <Dialog.DismissTrigger
                             as={IconButton}
@@ -213,7 +213,7 @@ const Footer = () => {
                             variant='ghost'
                             color='secondary'
                             isCircular
-                            className='absolute right-2 top-2'>
+                            className='absolute right-4 top-6'>
                             <i className='fa-solid fa-x h-5 w-5'></i>
                           </Dialog.DismissTrigger>
                         </div>
