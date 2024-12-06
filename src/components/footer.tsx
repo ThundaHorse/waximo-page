@@ -96,7 +96,7 @@ const Footer = () => {
       <footer className='bg-gray-900 px-8 pt-12'>
         <div className='container mx-auto'>
           <div className='flex flex-wrap justify-center gap-8'>
-            <div className='mt-8 flex flex-col items-center text-center md:text-left'>
+            <div className='mt-8 lg:mt-0 flex flex-col items-center text-center md:text-left'>
               <Image
                 width={100}
                 height={50}
@@ -105,12 +105,12 @@ const Footer = () => {
                 alt='Logo'
               />
 
-              <Typography className='mb-12 font-normal text-white'>
+              <Typography className='mb-12 text-sm font-normal text-white'>
                 The all-in-one waxing tool for snow gear
               </Typography>
             </div>
 
-            <div className='mt-8 md:mx-auto'>
+            <div className='mt-16 md:mx-auto md:mt-16 lg:mt-8'>
               <Typography
                 variant='h6'
                 className='mb-3 text-center text-white'>
@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
 
             <div className='mt-8 w-full md:mt-0 md:w-auto'>
-              <div className='w-full flex justify-end'>
+              <div className='w-full flex justify-center'>
                 <div className='mt-8 flex flex-col w-full max-w-sm gap-2 items-center'>
                   <span className='text-center text-white mb-4 text-sm font-semibold'>
                     Sign up now for Exclusive Updates!
@@ -167,9 +167,9 @@ const Footer = () => {
             </div>
           </div>
           <div className='mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between'>
-            <Typography className='text-white text-center'>
+            {/* <Typography className='text-white text-center'>
               Copyright © 2024 WAXIMO LLC. All rights reserved.
-            </Typography>
+            </Typography> */}
 
             <ul className='flex flex-wrap items-center justify-center md:justify-start'>
               <m.li
@@ -205,7 +205,7 @@ const Footer = () => {
                         <Dialog.DismissTrigger
                           as={Button}
                           color='error'>
-                          Cancel
+                          Close
                         </Dialog.DismissTrigger>
                       </div>
                     </Dialog.Content>
@@ -246,7 +246,7 @@ const Footer = () => {
                         <Dialog.DismissTrigger
                           as={Button}
                           color='error'>
-                          Cancel
+                          Close
                         </Dialog.DismissTrigger>
                       </div>
                     </Dialog.Content>
@@ -285,7 +285,7 @@ const Footer = () => {
                         <Dialog.DismissTrigger
                           as={Button}
                           color='error'>
-                          Cancel
+                          Close
                         </Dialog.DismissTrigger>
                       </div>
                     </Dialog.Content>
@@ -293,6 +293,10 @@ const Footer = () => {
                 </Dialog>
               </m.li>
             </ul>
+
+            <Typography className='text-white text-center'>
+              Copyright © 2024 WAXIMO LLC. All rights reserved.
+            </Typography>
           </div>
         </div>
       </footer>

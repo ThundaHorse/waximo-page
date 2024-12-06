@@ -5,7 +5,6 @@ import Image from 'next/image';
 import InfoCard from '@/components/info-card';
 import { Typography } from '@material-tailwind/react';
 import Section from '@/components/animated-section';
-import { m } from 'framer-motion';
 import { OPTIONS, OPTIONS2, OPTIONS3, OPTIONS4 } from '@/utils/constants';
 
 export function MobileConvenience() {
