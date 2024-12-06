@@ -185,7 +185,7 @@ const Footer = () => {
                   </Dialog.Trigger>
                   <Dialog.Overlay>
                     <Dialog.Content>
-                      <div className='overflow-y-auto mt-12 lg:mt-0 md:mt-0'>
+                      <div className='overflow-y-auto py-16 lg:py-2'>
                         <div className='relative'>
                           <div className='mb-4 flex items-center justify-between gap-4'>
                             <Dialog.DismissTrigger
@@ -200,7 +200,6 @@ const Footer = () => {
                           </div>
                         </div>
                         {renderPrivacyPolicy()}
-
                         <div className='mt-12 flex w-full items-center justify-end gap-2'>
                           <Dialog.DismissTrigger
                             as={Button}
