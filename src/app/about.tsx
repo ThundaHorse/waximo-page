@@ -11,8 +11,8 @@ export const AboutUs = () => {
           style={{ background: '#d7ffc2' }}>
           <div>
             <Typography
-              type='h4'
-              className='font-normal !text-gray-500 text-center'>
+              type='h3'
+              className='text-3xl !text-gray-500 text-center'>
               About us
             </Typography>
 

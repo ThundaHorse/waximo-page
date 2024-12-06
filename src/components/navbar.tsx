@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const LINKS = [
   {
-    title: 'Sign Up',
+    title: 'Sign up',
     href: 'hero-section',
     id: 'nav-hero',
   },
@@ -18,12 +18,12 @@ const LINKS = [
     id: 'nav-faq',
   },
   {
-    title: 'About Us',
+    title: 'About us',
     href: 'about-us-section',
     id: 'nav-about-us',
   },
   {
-    title: 'Contact Us',
+    title: 'Contact',
     href: 'footer-section',
     id: 'nav-contact-us',
   },
@@ -83,7 +83,8 @@ export function SimpleNavbar() {
           variant='ghost'
           color='secondary'
           onClick={() => setOpenNav(!openNav)}
-          className='ml-auto grid lg:hidden'>
+          className='ml-auto grid lg:hidden'
+          style={{ color: '#d7ffc2' }}>
           {openNav ? (
             <Xmark className='h-4 w-4' />
           ) : (

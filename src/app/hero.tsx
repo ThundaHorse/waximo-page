@@ -111,24 +111,30 @@ const Hero = () => {
           <div className='grid grid-cols-12'>
             <div className='col-span-full rounded-xl bg-slate-300 bg-opacity-75 py-10 px-6 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-100  xl:col-span-7'>
               <Typography
-                type='h5'
-                className='mb-4 text-center'
+                type='h4'
+                className='text-xl lg:text-3xl mb-4 text-center'
                 style={{ color: '#d7ffc2' }}>
-                Need a better way to wax your snow gear?
+                Need a better way to wax your snow equipment?
               </Typography>
 
-              <Typography
+              {/* <Typography
                 type='h5'
-                className='mb-4 text-center'>
+                className='mb-4 text-lg lg:text-3xl text-center'>
                 Introducing
-              </Typography>
+              </Typography> */}
 
               <Typography className='mb-4 text-center'>
                 WAXIMO, the all-in-one waxing tool for snow gear
               </Typography>
 
+              <Typography
+                type='h5'
+                className='mb-4 text-lg lg:text-3xl text-center'>
+                Coming Soon
+              </Typography>
+
               <Typography className='text-sm font-semibold text-center mb-4'>
-                Sign up now for Exclusive Updates!
+                Sign up for exclusive updates!
               </Typography>
 
               {!showReferral ? (
@@ -175,8 +181,8 @@ const Hero = () => {
         style={{ background: '#2c2c2c' }}>
         <div>
           <Typography
-            type='h5'
-            className='text-center mb-12 mt-12'
+            type='h3'
+            className='text-center text-3xl mb-12 mt-12'
             style={{ color: '#d7ffc2' }}>
             What is WAXIMO?
           </Typography>

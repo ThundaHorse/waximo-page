@@ -13,7 +13,7 @@ export const FaqSection = () => {
         <div className='container max-w-6xl mx-auto'>
           <Typography
             type='h3'
-            className='text-white text-center'
+            className='text-white text-3xl text-center'
             style={{ color: '#d7ffc2' }}>
             FAQ
           </Typography>
