@@ -185,7 +185,7 @@ const Footer = () => {
                   </Dialog.Trigger>
                   <Dialog.Overlay>
                     <Dialog.Content>
-                      <div className='overflow-y-auto mt-12'>
+                      <div className='overflow-y-auto mt-12 lg:mt-0 md:mt-0'>
                         <div className='relative'>
                           <div className='mb-4 flex items-center justify-between gap-4'>
                             <Dialog.DismissTrigger
