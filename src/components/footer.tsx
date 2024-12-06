@@ -95,7 +95,7 @@ const Footer = () => {
     <section id='footer-section'>
       <footer className='bg-gray-900 px-8 pt-12'>
         <div className='container mx-auto'>
-          <div className='flex flex-wrap justify-center gap-8 md:justify-between'>
+          <div className='flex flex-wrap justify-center gap-8'>
             <div className='mt-8 flex flex-col items-center text-center md:text-left'>
               <Image
                 width={100}
@@ -110,7 +110,7 @@ const Footer = () => {
               </Typography>
             </div>
 
-            <div className='mt-8'>
+            <div className='mt-8 md:mx-auto'>
               <Typography
                 variant='h6'
                 className='mb-3 text-center text-white'>
