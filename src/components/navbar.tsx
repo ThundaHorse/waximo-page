@@ -37,7 +37,7 @@ function NavList() {
           <Link
             id={id}
             to={href}
-            className='p-1 hover:text-primary text-white'
+            className='p-1 text-white hover:text-green-200'
             smooth={true}
             duration={500}>
             {title}
