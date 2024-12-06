@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@types/google-publisher-tag": "^1.20241202.0",
     "@types/react-scroll": "^1.8.10",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.14.0",
