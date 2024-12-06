@@ -22,11 +22,6 @@ const LINKS = [
     href: 'about-us-section',
     id: 'nav-about-us',
   },
-  {
-    title: 'Contact',
-    href: 'footer-section',
-    id: 'nav-contact-us',
-  },
 ];
 
 function NavList() {
@@ -37,7 +32,7 @@ function NavList() {
           <Link
             id={id}
             to={href}
-            className='p-1 text-white hover:text-green-200'
+            className='p-1 text-white hover:text-green-300'
             smooth={true}
             duration={500}>
             {title}
