@@ -35,7 +35,7 @@ export function MobileConvenience() {
               className='mb-5 text-left text-lg  px-0'>
               Let's face it, gear is not cheap - why not make it last longer?
               Regularly waxing and maintaining your snow equipment will help you
-              protect your investments.
+              protect your investments and reduce waste.
             </Typography>
 
             <div className='col-span-2 flex flex-col mb-24'>
@@ -73,7 +73,7 @@ export function MobileConvenience() {
               Avoid catching an edge and get a smoother glide! Gain greater
               control of your snowboard, adapt to a variety of terrains, and
               have an overall better time! A well waxed snowboard will boost
-              your confidence on the slopes.
+              your confidence and performance on the slopes.
             </Typography>
 
             <div className='col-span-2 flex flex-col mb-24'>
@@ -103,7 +103,7 @@ export function MobileConvenience() {
               type='h5'
               className='mb-4'
               style={{ color: '#d7ffc2' }}>
-              Enjoy the process, it's easy!
+              Enjoy the process, it's easy
             </Typography>
             <Typography
               type='small'
@@ -140,7 +140,7 @@ export function MobileConvenience() {
               type='h5'
               style={{ color: '#d7ffc2' }}
               className='mb-4'>
-              Gift to a Snowboarding enthusiast!
+              Gift to a snowboarding enthusiast
             </Typography>
             <Typography
               type='small'

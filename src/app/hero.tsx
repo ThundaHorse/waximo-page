@@ -159,7 +159,7 @@ const Hero = () => {
                         type='submit'
                         color='success'
                         disabled={isLoading}>
-                        Sign Up
+                        Sign up
                       </Button>
                     </form>
                   </div>
@@ -189,9 +189,9 @@ const Hero = () => {
           <Typography
             variant='paragraph'
             className='font-normal text-white text-center'>
-            <b>WAXIMO</b> is an innovative, cost-effective, time-saving,
-            all-in-one tool that simplifies the waxing process for you to spend
-            less time maintaining your snowboard or ski equipment and more time
+            <b>WAXIMO</b> is an innovative, cost-effective, time-saving, 
+            all-in-one tool that simplifies the waxing process for you to spend 
+            less time maintaining your snowboard or ski equipment and more time 
             on the slopes.
           </Typography>
 
