@@ -40,14 +40,14 @@ export const FaqSection = () => {
 
                   <li>
                     3. Glide the tool across your snow equipment and leave it to
-                    dry for about five minutes.
+                    dry for about five minutes
                   </li>
                 </ol>
 
                 <Typography
                   type='h6'
                   className='text-white'>
-                  No scraping, no prep no additional tools or work required.
+                  No scraping, no prep, no additional tools or work required.
                 </Typography>
               </Accordion.Content>
             </Accordion.Item>
@@ -56,7 +56,7 @@ export const FaqSection = () => {
               value='what-kind'
               className='p-5'>
               <Accordion.Trigger className='text-white'>
-                What kind of equipment can I wax with WAXIMO
+                What kind of equipment can I wax with WAXIMO?
                 <ChevronDownIcon className='h-4 w-4 group-data-[open=true]:rotate-180' />
               </Accordion.Trigger>
 
@@ -66,7 +66,7 @@ export const FaqSection = () => {
                   current shape is optimized for use on a snowboard, WAXIMO will
                   be able to wax your skis as well (just expect the tool may be
                   slightly wider than your ski). We are working on a dedicated
-                  ski version, coming soon.
+                  ski solution, coming soon.
                 </Typography>
               </Accordion.Content>
             </Accordion.Item>
@@ -131,7 +131,7 @@ export const FaqSection = () => {
 
               <Accordion.Content>
                 <Typography className='text-white'>
-                  WAXIMO is powered by a standard 20v wall outlet.
+                  WAXIMO is powered by a standard 120v wall outlet.
                 </Typography>
               </Accordion.Content>
             </Accordion.Item>
