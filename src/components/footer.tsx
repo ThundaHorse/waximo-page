@@ -114,7 +114,7 @@ const Footer = () => {
               <Typography
                 variant='h6'
                 className='mb-3 text-center text-white'>
-                Follow Us
+                Follow us
               </Typography>
               <div className='flex flex-col gap-2'>
                 <div className='gap-2 lg:flex lg:justify-center text-center'>
@@ -138,7 +138,7 @@ const Footer = () => {
               <div className='w-full flex justify-center'>
                 <div className='mt-8 flex flex-col w-full max-w-sm gap-2 items-center'>
                   <span className='text-center text-white mb-4 text-sm font-semibold'>
-                    Sign up now for Exclusive Updates!
+                    Sign up now for exclusive updates!
                   </span>
                   <form
                     className='flex w-full flex-col lg:flex-row max-w-sm items-center justify-center gap-2 text-white'

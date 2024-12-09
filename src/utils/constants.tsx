@@ -99,7 +99,7 @@ export const OPTIONS3 = [
     description: '',
   },
   {
-    title: 'Single-handed operation',
+    title: 'Single handed operation',
     description: '',
   },
   {
