@@ -65,7 +65,7 @@ export function SimpleNavbar() {
           <Image
             width={60}
             height={50}
-            src='/images/waximologo1.png'
+            src='/images/waximologo2.png'
             className=''
             alt='Logo'
           />
