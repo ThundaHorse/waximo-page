@@ -159,7 +159,7 @@ const Hero = () => {
                         type='submit'
                         color='success'
                         disabled={isLoading}>
-                        Sign Up
+                        Sign up
                       </Button>
                     </form>
                   </div>
